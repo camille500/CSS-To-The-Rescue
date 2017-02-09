@@ -10,7 +10,6 @@ body {
 div {
   display: flex;
   flex-wrap: wrap-reverse;
-  flex-shrink: 20%;
   background-color: rgb(198, 198, 198);
 }
 

@@ -1,0 +1,178 @@
+/* GENERIC
+------------------------------------------------*/
+* {
+  border: none;
+}
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 1em;
+}
+
+/* CHAT
+------------------------------------------------*/
+ol.chat {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  max-width: 18em;
+  padding: .5em 1em 2em 1em;
+  margin: 2em auto 0 auto;
+  background-color: #ecf0f1;
+  list-style: none;
+}
+
+ol.chat > li > p {
+  padding: 1em;
+  margin: 1.5em 0 0;
+  border-radius: .5em;
+  background-color: white;
+}
+
+ol.chat footer > p {
+  display: inline-block;
+  margin: .5em 0 0 1em;
+  font-size: .7em;
+}
+
+ol.chat > [data-status="READ"] {
+  position: relative;
+  left: 3.5em;
+  color: #2ecc71;
+}
+
+ol.chat > [data-status="DELIVERED"] {
+  position: relative;
+  left: 2em;
+  color: #e74c3c;
+}
+
+ol.chat > time {
+  color: #34495e;
+}
+
+form.chat {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  max-width: 18em;
+  padding: 1em;
+  margin: 0em auto;
+  background-color: #2980b9;
+}
+
+form.chat > [name="field-message"] {
+  resize: none;
+  width: 100%;
+  padding: 1em 1em;
+}
+
+form.chat > [for="field-message"] {
+  margin-bottom: .5em;
+  color: white;
+  font-size: .8em;
+}
+
+form.chat button[type="submit"] {
+  width: 100%;
+  padding: .5em 0;
+  margin-top: 1em;
+  background-color: #e74c3c;
+  color: white;
+  font-size: 1em;
+}
+
+/* LOGIN
+------------------------------------------------*/
+* {
+  border: none;
+}
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 1em;
+}
+
+form.login {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  max-width: 20em;
+  padding: 2em;
+  margin: 2em auto 0 auto;
+  background-color: #ecf0f1;
+}
+
+form.login a {
+  -ms-flex-preferred-size: 40%;
+      flex-basis: 40%;
+  margin-top: .15em;
+  margin-left: 2.2em;
+  color: #e67e22;
+  font-size: .9em;
+  text-decoration: none;
+  text-align: right;
+}
+
+form.login label {
+  -ms-flex-preferred-size: 100%;
+      flex-basis: 100%;
+  margin-bottom: .5em;
+}
+
+form.login input {
+  -ms-flex-preferred-size: 100%;
+      flex-basis: 100%;
+  padding: .75em .5em;
+  margin-bottom: 1em;
+  font-size: 1.1em;
+}
+
+form.login button[type="submit"] {
+  -ms-flex-preferred-size: 100%;
+      flex-basis: 100%;
+  padding: 1em;
+  background-color: #e74c3c;
+  color: white;
+  font-size: 1em;
+}
+
+form.login [for="field-stay-logged-in"] {
+  -ms-flex-preferred-size: 35%;
+      flex-basis: 35%;
+  margin-left: .2em;
+  margin-top: .15em;
+  font-size: .9em;
+}
+
+form.login [type="checkbox"] {
+  -ms-flex-preferred-size: auto;
+      flex-basis: auto;
+}
+
+/* MEDIA ITEM
+------------------------------------------------*/
+
+/* MEDIA ITEM SUBTITLE
+------------------------------------------------*/
+
+/* NAVIGATION
+------------------------------------------------*/
+
+/* RATING
+------------------------------------------------*/
+
+/* STEP INDICATOR
+------------------------------------------------*/

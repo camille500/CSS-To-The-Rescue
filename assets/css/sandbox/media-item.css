@@ -1,0 +1,41 @@
+* {
+  border: none;
+}
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 1em;
+}
+
+article.media-item {
+  max-width: 40em;
+  padding: 1em;
+  padding-bottom: 1.5em;
+  margin: 2em auto 0 auto;
+  background-color: #ecf0f1;
+}
+
+article.media-item > h1 {
+  padding: .5em;
+  margin-top: 0;
+  background-color: #2980b9;
+  font-size: 1.3em;
+}
+
+article.media-item h1 > a {
+  color: white;
+  text-decoration: none;
+}
+
+article.media-item > p {
+  max-width: 100%;
+  text-align: start;
+}
+
+article.media-item > img {
+  max-width: -webkit-min-content;
+  max-width: -moz-min-content;
+  max-width: min-content;
+  margin-right: 1em;
+  float: left;
+}

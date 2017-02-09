@@ -7,7 +7,7 @@ body {
   font-size: 1em;
 }
 
-form {
+form.login {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -19,7 +19,7 @@ form {
   background-color: #ecf0f1;
 }
 
-form a {
+form.login a {
   -ms-flex-preferred-size: 40%;
       flex-basis: 40%;
   margin-top: .15em;
@@ -30,13 +30,13 @@ form a {
   text-align: right;
 }
 
-label {
+form.login label {
   -ms-flex-preferred-size: 100%;
       flex-basis: 100%;
   margin-bottom: .5em;
 }
 
-input {
+form.login input {
   -ms-flex-preferred-size: 100%;
       flex-basis: 100%;
   padding: .75em .5em;
@@ -44,7 +44,7 @@ input {
   font-size: 1.1em;
 }
 
-button[type="submit"] {
+form.login button[type="submit"] {
   -ms-flex-preferred-size: 100%;
       flex-basis: 100%;
   padding: 1em;
@@ -53,7 +53,7 @@ button[type="submit"] {
   font-size: 1em;
 }
 
-[for="field-stay-logged-in"] {
+form.login [for="field-stay-logged-in"] {
   -ms-flex-preferred-size: 35%;
       flex-basis: 35%;
   margin-left: .2em;
@@ -61,7 +61,7 @@ button[type="submit"] {
   font-size: .9em;
 }
 
-[type="checkbox"] {
+form.login [type="checkbox"] {
   -ms-flex-preferred-size: auto;
       flex-basis: auto;
 }
