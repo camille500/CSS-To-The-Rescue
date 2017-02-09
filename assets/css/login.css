@@ -11,15 +11,19 @@ form {
   margin: 2em auto 0 auto;
   max-width: 20em;
   padding: 2em;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   background-color: #ecf0f1;
 }
 
 form a {
   color: #e67e22;
   font-size: .9em;
-  flex-basis: 40%;
+  -ms-flex-preferred-size: 40%;
+      flex-basis: 40%;
   margin-top: .15em;
   text-decoration: none;
   text-align: right;
@@ -28,14 +32,16 @@ form a {
 
 label {
   margin-bottom: .5em;
-  flex-basis: 100%;
+  -ms-flex-preferred-size: 100%;
+      flex-basis: 100%;
 }
 
 input {
   font-size: 1.1em;
   padding: .75em .5em;
   margin-bottom: 1em;
-  flex-basis: 100%;
+  -ms-flex-preferred-size: 100%;
+      flex-basis: 100%;
 }
 
 button[type="submit"] {
@@ -43,16 +49,19 @@ button[type="submit"] {
   padding: 1em;
   background-color: #e74c3c;
   color: white;
-  flex-basis: 100%;
+  -ms-flex-preferred-size: 100%;
+      flex-basis: 100%;
 }
 
 [for="field-stay-logged-in"] {
   font-size: .9em;
-  flex-basis: 35%;
+  -ms-flex-preferred-size: 35%;
+      flex-basis: 35%;
   margin-left: .2em;
   margin-top: .15em;
 }
 
 [type="checkbox"] {
-  flex-basis: auto;
+  -ms-flex-preferred-size: auto;
+      flex-basis: auto;
 }

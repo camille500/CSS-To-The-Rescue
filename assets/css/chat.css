@@ -11,8 +11,13 @@ ol {
   margin: 2em auto 0 auto;
   max-width: 18em;
   padding: .5em 1em 2em 1em;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   background-color: #ecf0f1;
   list-style: none;
 }
@@ -28,15 +33,22 @@ form {
   margin: 0em auto;
   max-width: 18em;
   padding: 1em;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   background-color: #2980b9;
 }
 
 [name="field-message"] {
   resize: none;
-  padding: 1.5em 7em;
+  padding: 1em 1em;
+  width: 100%;
 }
 
 [for="field-message"] {
