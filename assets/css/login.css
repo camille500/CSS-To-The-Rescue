@@ -8,57 +8,57 @@ body {
 }
 
 form {
-  margin: 2em auto 0 auto;
-  max-width: 20em;
-  padding: 2em;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
+  max-width: 20em;
+  padding: 2em;
+  margin: 2em auto 0 auto;
   background-color: #ecf0f1;
 }
 
 form a {
-  color: #e67e22;
-  font-size: .9em;
   -ms-flex-preferred-size: 40%;
       flex-basis: 40%;
   margin-top: .15em;
+  margin-left: 2.2em;
+  color: #e67e22;
+  font-size: .9em;
   text-decoration: none;
   text-align: right;
-  margin-left: 2.2em;
 }
 
 label {
-  margin-bottom: .5em;
   -ms-flex-preferred-size: 100%;
       flex-basis: 100%;
+  margin-bottom: .5em;
 }
 
 input {
-  font-size: 1.1em;
-  padding: .75em .5em;
-  margin-bottom: 1em;
   -ms-flex-preferred-size: 100%;
       flex-basis: 100%;
+  padding: .75em .5em;
+  margin-bottom: 1em;
+  font-size: 1.1em;
 }
 
 button[type="submit"] {
-  font-size: 1em;
+  -ms-flex-preferred-size: 100%;
+      flex-basis: 100%;
   padding: 1em;
   background-color: #e74c3c;
   color: white;
-  -ms-flex-preferred-size: 100%;
-      flex-basis: 100%;
+  font-size: 1em;
 }
 
 [for="field-stay-logged-in"] {
-  font-size: .9em;
   -ms-flex-preferred-size: 35%;
       flex-basis: 35%;
   margin-left: .2em;
   margin-top: .15em;
+  font-size: .9em;
 }
 
 [type="checkbox"] {

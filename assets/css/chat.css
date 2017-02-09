@@ -8,9 +8,6 @@ body {
 }
 
 ol {
-  margin: 2em auto 0 auto;
-  max-width: 18em;
-  padding: .5em 1em 2em 1em;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -18,6 +15,9 @@ ol {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  max-width: 18em;
+  padding: .5em 1em 2em 1em;
+  margin: 2em auto 0 auto;
   background-color: #ecf0f1;
   list-style: none;
 }
@@ -25,14 +25,11 @@ ol {
 li > p {
   padding: 1em;
   margin: 1.5em 0 0;
-  background-color: white;
   border-radius: .5em;
+  background-color: white;
 }
 
 form {
-  margin: 0em auto;
-  max-width: 18em;
-  padding: 1em;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -42,34 +39,37 @@ form {
           flex-direction: row;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
+  max-width: 18em;
+  padding: 1em;
+  margin: 0em auto;
   background-color: #2980b9;
 }
 
 [name="field-message"] {
   resize: none;
-  padding: 1em 1em;
   width: 100%;
+  padding: 1em 1em;
 }
 
 [for="field-message"] {
-  font-size: .8em;
-  color: white;
   margin-bottom: .5em;
+  color: white;
+  font-size: .8em;
 }
 
 button[type="submit"] {
-  font-size: 1em;
-  margin-top: 1em;
-  padding: .5em 0;
   width: 100%;
+  padding: .5em 0;
+  margin-top: 1em;
   background-color: #e74c3c;
   color: white;
+  font-size: 1em;
 }
 
 footer p {
-  font-size: .7em;
-  margin: .5em 0 0 1em;
   display: inline-block;
+  margin: .5em 0 0 1em;
+  font-size: .7em;
 }
 
 [data-status="READ"] {
