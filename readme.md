@@ -10,3 +10,4 @@ Annotations will follow soon
 
 ### Sources
 - http://getemoji.com/
+- https://flatuicolors.com/

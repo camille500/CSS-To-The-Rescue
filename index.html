@@ -107,25 +107,34 @@
 
     <section id="media-subtitle">
 
-      <article class="media-subtitle">
-      	<h1>This picture has a title</h1>
-      	<figure>
-      		<!-- Portrait -->
-      		<!-- <img src="https://vasilis.nl/voto/fotos/klein/170126170241-we-hebben-een-bortusk-1280.jpg" alt="A drawing of a colorful monster on a newspaper" /> -->
-      		<!-- Landscape -->
-      		<img src="https://vasilis.nl/voto/fotos/klein/161001174911-verhuizen-1280.jpg" alt="A bulldozer transporting a beach house along a sunny beach" />
-      		<figcaption>
-      			<p>
-      				There's also this big and in depth description of the picture. You often see this on newssites or photo blogs. You could also replace the photo with a video if needed.
-      			</p>
-      			<footer>
-      				<time datetime="2017-02-06">6-2-2017</time> © 2017 <a href="https://vasilis.nl">Vasilis van Gemert</a>
-      			</footer>
-      		</figcaption>
-      	</figure>
-      </article>
+      <h1 class="hint">Extra</h1>
+      <p class="hint-text">Because I juse JS for routes, I couldn't get the de-empahasizing done.
+         For the working example <a href="assets/components/media-subtitle.html">click here</a></p>
+
+        <article class="media-subtitle">
+        	<h1>This picture has a title</h1>
+        	<figure>
+        		<!-- Portrait -->
+        		<!-- <img src="https://vasilis.nl/voto/fotos/klein/170126170241-we-hebben-een-bortusk-1280.jpg" alt="A drawing of a colorful monster on a newspaper" /> -->
+        		<!-- Landscape -->
+            <a href="#big-image"><img src="https://vasilis.nl/voto/fotos/klein/161001174911-verhuizen-1280.jpg" alt="A bulldozer transporting a beach house along a sunny beach" /></a>
+            <div class="hidden" id="big-image">
+              <a href="#"><p>CLOSE [X]</p></a>
+              <img src="https://vasilis.nl/voto/fotos/klein/161001174911-verhuizen-1280.jpg" alt="A bulldozer transporting a beach house along a sunny beach" />
+            </div>
+        		<figcaption>
+        			<p>
+        				There's also this big and in depth description of the picture. You often see this on newssites or photo blogs. You could also replace the photo with a video if needed.
+        			</p>
+        			<footer>
+        				<time datetime="2017-02-06">6-2-2017</time> © 2017 <a href="https://vasilis.nl">Vasilis van Gemert</a>
+        			</footer>
+        		</figcaption>
+        	</figure>
+        </article>
 
     </section>
+
 
     <section id="rating">
 

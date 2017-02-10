@@ -27,7 +27,7 @@ article.media-subtitle > h1 {
   color: #e74c3c;
 }
 
-article.media-subtitle figure > img,
+article.media-subtitle figure a > img,
 article.media-subtitle figure > p {
   max-width: 100%;
 }
@@ -39,4 +39,59 @@ article.media-subtitle footer > time {
 article.media-subtitle footer > a {
   float: right;
   color: #2980b9;
+}
+
+.hidden {
+  visibility: hidden;
+}
+
+article.media-subtitle figure > div:target {
+  visibility: visible;
+  position: absolute;
+  left:0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.64);
+}
+
+article.media-subtitle figure div#big-image > img {
+  position: absolute;
+  top: 4vh;
+  left: 20vw;
+  max-width: 55%;
+}
+
+article.media-subtitle figure div#big-image a > p {
+  position: absolute;
+  top: 2%;
+  left: 77%;
+  color: white;
+}
+
+@media screen and (max-width: 56em) {
+  article.media-subtitle figure div#big-image > img {
+  max-width: 65%;
+  }
+  article.media-subtitle figure div#big-image a > p {
+    top: 2%;
+    left: 88%;
+  }
+}
+
+@media screen and (max-width: 44em) {
+  article.media-subtitle figure div#big-image > img {
+  left: 7vw;
+  max-width: 80%;
+  }
+  article.media-subtitle figure div#big-image a > p {
+    top: 40%;
+    left: 35%;
+  }
+}
+
+.hint {
+  text-align: center;
+  color: #e74c3c;
+  font-size: 1.4em;
 }

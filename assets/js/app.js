@@ -29,7 +29,11 @@
         if('#' + section.id === window.location.hash) {
           section.classList.remove('hidden');
         } else {
+          if(window.location.hash === "#big-image") {
+            
+          } else {
           section.classList.add('hidden');
+          }
         }
       });
     }

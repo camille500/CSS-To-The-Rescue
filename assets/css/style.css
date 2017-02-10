@@ -83,6 +83,11 @@ form.chat > [for="field-message"] {
   font-size: .8em;
 }
 
+form.chat > textarea:focus {
+  border: 4px #2ecc71 solid;
+  outline: none;
+}
+
 form.chat button[type="submit"] {
   width: 100%;
   padding: .5em 0;
@@ -129,6 +134,11 @@ form.login input {
   padding: .75em .5em;
   margin-bottom: 1em;
   font-size: 1.1em;
+}
+
+form.login > input:focus {
+  border: 4px #2ecc71 solid;
+  outline: none;
 }
 
 form.login button[type="submit"] {
@@ -200,7 +210,7 @@ article.media-subtitle {
           flex-direction: column;
   max-width: 35em;
   padding: 1.5em .75em;
-  margin: 2em auto 0 auto;
+  margin: 0 auto 0 auto;
   background-color: #ecf0f1;
 }
 
@@ -210,7 +220,7 @@ article.media-subtitle > h1 {
   color: #e74c3c;
 }
 
-article.media-subtitle figure > img,
+article.media-subtitle figure a > img,
 article.media-subtitle figure > p {
   max-width: 100%;
 }
@@ -222,6 +232,71 @@ article.media-subtitle footer > time {
 article.media-subtitle footer > a {
   float: right;
   color: #2980b9;
+}
+
+.hidden {
+  visibility: hidden;
+}
+
+article.media-subtitle figure > div:target {
+  visibility: visible;
+  position: absolute;
+  left:0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.64);
+}
+
+article.media-subtitle figure div#big-image > img {
+  position: absolute;
+  top: 4vh;
+  left: 20vw;
+  max-width: 55%;
+}
+
+article.media-subtitle figure div#big-image a > p {
+  position: absolute;
+  top: 2%;
+  left: 77%;
+  color: white;
+}
+
+@media screen and (max-width: 56em) {
+  article.media-subtitle figure div#big-image > img {
+  max-width: 65%;
+  }
+  article.media-subtitle figure div#big-image a > p {
+    top: 2%;
+    left: 88%;
+  }
+}
+
+@media screen and (max-width: 44em) {
+  article.media-subtitle figure div#big-image > img {
+  left: 7vw;
+  max-width: 80%;
+  }
+  article.media-subtitle figure div#big-image a > p {
+    top: 40%;
+    left: 35%;
+  }
+}
+
+.hint {
+  text-align: center;
+  color: #e74c3c;
+  font-size: 1.4em;
+}
+
+.hint-text {
+  color: white;
+  text-align: center;
+}
+
+.hint-text a {
+  color: white;
+  font-weight: 800;
 }
 
 /* NAVIGATION
@@ -322,8 +397,7 @@ nav.navigation ul li.dropdown:hover > ul {
 /* RATING
 ------------------------------------------------*/
 legend {
-  max-width: 23.15em;
-  min-width: 23.15em;
+  width: 23.15em;
   padding: .75em;
   margin: 0 auto;
   background-color: #2980b9;
@@ -379,6 +453,16 @@ div.rating > [type="radio"] {
   display: none;
 }
 
+@media only screen and (max-width: 37em) {
+  legend {
+    width: auto;
+    padding: 0;
+    margin-bottom: 1em;
+    background-color: transparent;
+    color: white;
+    text-align: left;
+  }
+}
 /* STEP INDICATOR
 ------------------------------------------------*/
 nav.step-indicator {
@@ -458,4 +542,8 @@ section {
 section.intro {
   padding: 2em;
   color: white;
+}
+
+section#media-subtitle {
+  padding-top: 1em;
 }
