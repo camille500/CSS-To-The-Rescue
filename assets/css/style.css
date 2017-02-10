@@ -94,15 +94,6 @@ form.chat button[type="submit"] {
 
 /* LOGIN
 ------------------------------------------------*/
-* {
-  border: none;
-}
-
-body {
-  font-family: 'Open Sans', sans-serif;
-  font-size: 1em;
-}
-
 form.login {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -164,15 +155,307 @@ form.login [type="checkbox"] {
 
 /* MEDIA ITEM
 ------------------------------------------------*/
+article.media-item {
+  max-width: 40em;
+  padding: 1em;
+  padding-bottom: 1.5em;
+  margin: 2em auto 0 auto;
+  background-color: #ecf0f1;
+}
+
+article.media-item > h1 {
+  padding: .5em;
+  margin-top: 0;
+  background-color: #2980b9;
+  font-size: 1.3em;
+}
+
+article.media-item h1 > a {
+  color: white;
+  text-decoration: none;
+}
+
+article.media-item > p {
+  max-width: 100%;
+  text-align: start;
+}
+
+article.media-item > img {
+  max-width: -webkit-min-content;
+  max-width: -moz-min-content;
+  max-width: min-content;
+  margin-right: 1em;
+  float: left;
+}
 
 /* MEDIA ITEM SUBTITLE
 ------------------------------------------------*/
+article.media-subtitle {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  max-width: 35em;
+  padding: 1.5em .75em;
+  margin: 2em auto 0 auto;
+  background-color: #ecf0f1;
+}
+
+article.media-subtitle > h1 {
+  margin: 0;
+  margin-left: 1.5em;
+  color: #e74c3c;
+}
+
+article.media-subtitle figure > img,
+article.media-subtitle figure > p {
+  max-width: 100%;
+}
+
+article.media-subtitle footer > time {
+  color: #2c3e50;
+}
+
+article.media-subtitle footer > a {
+  float: right;
+  color: #2980b9;
+}
 
 /* NAVIGATION
 ------------------------------------------------*/
+nav.navigation {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  padding: .15em 1em;
+  background-color: #ecf0f1;
+}
+
+nav.navigation > h1 {
+  color: #2c3e50;
+  margin-top: 1.35em;
+  font-size: 1.3em;
+}
+
+nav.navigation > ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  /*flex-wrap: wrap;*/
+  list-style: none;
+}
+
+nav.navigation ul li > a {
+  display: block;
+  padding: .8em 1.65em;
+  margin-right: 1em;
+  background-color: #3498db;
+  color: #fff;
+  text-decoration: none;
+}
+
+nav.navigation ul li > ul {
+  position: absolute;
+  display: none;
+  padding: 0;
+  list-style: none;
+}
+
+nav.navigation ul li ul li > a {
+  max-width: 100%;
+  padding-right: 1em;
+  background-color: #219ef2;
+  color: white;
+}
+
+nav.navigation ul li > [aria-label="Home, current page"] {
+  background-color: #e74c3c;
+  color: white;
+}
+
+nav.navigation ul li > a:hover,
+nav.navigation ul li ul li > a:hover {
+  background-color: #2980b9;
+}
+
+nav.navigation ul li.dropdown:hover > ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+@media only screen and (max-width: 41.75em) {
+  nav.navigation {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  nav.navigation > ul {
+    display: block;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    padding-left: 0;
+  }
+  nav.navigation ul li > ul {
+    position: static;
+  }
+}
 
 /* RATING
 ------------------------------------------------*/
+legend {
+  max-width: 23.15em;
+  min-width: 23.15em;
+  padding: .75em;
+  margin: 0 auto;
+  background-color: #2980b9;
+  color: white;
+  font-size: 1.5em;
+  text-align: center;
+}
+
+div.rating {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  max-width: 35em;
+  padding: 1em;
+  margin: 0 auto;
+  background-color: #ecf0f1;
+}
+
+div.rating > label {
+  -ms-flex-preferred-size: 10%;
+      flex-basis: 10%;
+  padding-top: .5em;
+  font-weight: 500;
+  text-align: center;
+}
+
+div.rating label > svg {
+  -webkit-transition: .5s;
+  transition: .5s;
+  min-width: 5em;
+  margin-top: 1em;
+}
+
+div.rating label > svg:hover {
+  -webkit-transition: .5s;
+  transition: .5s;
+  min-width: 6em;
+  cursor: pointer;
+}
+
+div.rating label:hover {
+  font-weight: 800;
+}
+
+div.rating > [type="radio"] {
+  display: none;
+}
 
 /* STEP INDICATOR
 ------------------------------------------------*/
+nav.step-indicator {
+  max-width: 35em;
+  padding: 1em;
+  margin: 2em auto 0 auto;
+  background-color: #ecf0f1;
+}
+
+nav.step-indicator > h1 {
+  margin-bottom: 1em;
+  font-size: 1.3em;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+nav.step-indicator > progress {
+  width: 100%;
+  height: 2em;
+  border: 0;
+  background-color: #fff;
+}
+
+nav.step-indicator > progress::-webkit-progress-bar {
+  background-color: #bdc3c7;
+}
+nav.step-indicator > progress::-webkit-progress-value {
+  background-color: #3498db;
+}
+
+nav.step-indicator > ol {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 0;
+  margin-top: 2em;
+  list-style-type: none;
+}
+
+nav.step-indicator ol > li {
+  width: 20%;
+  padding: 1em .2em;
+  background-color: white;
+  text-align: center;
+}
+
+nav.step-indicator ol li > a {
+  color: #27ae60;
+  text-decoration: none;
+}
+
+[aria-label="Address, current step"] {
+  color: #27ae60;
+  font-weight: 800;
+}
+
+/* SECTIONS */
+.hidden {
+  display: none;
+}
+
+section {
+  height: 85vh;
+  padding-top: 3em;
+  background-color: #2c3e50;
+}
+
+section.intro {
+  padding: 2em;
+  color: white;
+}

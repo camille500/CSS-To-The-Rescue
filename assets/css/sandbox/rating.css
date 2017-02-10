@@ -7,25 +7,47 @@ body {
   font-size: 1em;
 }
 
-div {
-  display: flex;
-  flex-wrap: wrap-reverse;
-  background-color: rgb(198, 198, 198);
-}
-
 legend {
+  min-width: 23.15em;
+  padding: .75em;
+  background-color: #2980b9;
+  color: white;
   font-size: 1.5em;
-}
-
-svg {
-  width: 5em;
-  margin-top: 2em;
-}
-
-[type="radio"] {
-  margin-left: 2em;
-}
-
-label {
   text-align: center;
+}
+
+div.rating {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  max-width: 35em;
+  padding: 1em;
+  background-color: #ecf0f1;
+}
+
+div.rating > label {
+  flex-basis: 10%;
+  padding-top: .5em;
+  font-weight: 500;
+  text-align: center;
+}
+
+div.rating label > svg {
+  transition: .5s;
+  min-width: 5em;
+  margin-top: 1em;
+}
+
+div.rating label > svg:hover {
+  transition: .5s;
+  min-width: 6em;
+  cursor: pointer;
+}
+
+div.rating label:hover {
+  font-weight: 800;
+}
+
+div.rating > [type="radio"] {
+  display: none;
 }

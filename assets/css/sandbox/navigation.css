@@ -6,3 +6,96 @@ body {
   font-family: 'Open Sans', sans-serif;
   font-size: 1em;
 }
+
+nav.navigation {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  padding: .15em 1em;
+  background-color: #ecf0f1;
+}
+
+nav.navigation > h1 {
+  color: #2c3e50;
+  margin-top: 1.35em;
+  font-size: 1.3em;
+}
+
+nav.navigation > ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  /*flex-wrap: wrap;*/
+  list-style: none;
+}
+
+nav.navigation ul li > a {
+  display: block;
+  padding: .8em 1.65em;
+  margin-right: 1em;
+  background-color: #3498db;
+  color: #fff;
+  text-decoration: none;
+}
+
+nav.navigation ul li > ul {
+  position: absolute;
+  display: none;
+  padding: 0;
+  list-style: none;
+}
+
+nav.navigation ul li ul li > a {
+  max-width: 100%;
+  padding-right: 1em;
+  background-color: #219ef2;
+  color: white;
+}
+
+nav.navigation ul li > [aria-label="Home, current page"] {
+  background-color: #e74c3c;
+  color: white;
+}
+
+nav.navigation ul li > a:hover,
+nav.navigation ul li ul li > a:hover {
+  background-color: #2980b9;
+}
+
+nav.navigation ul li.dropdown:hover > ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+@media only screen and (max-width: 41.75em) {
+  nav.navigation {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  nav.navigation > ul {
+    display: block;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    padding-left: 0;
+  }
+  nav.navigation ul li > ul {
+    position: static;
+  }
+}
