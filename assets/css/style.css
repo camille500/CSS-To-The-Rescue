@@ -540,10 +540,16 @@ section {
 }
 
 section.intro {
-  padding: 2em;
   color: white;
 }
 
 section#media-subtitle {
   padding-top: 1em;
+}
+
+.vertical-center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
