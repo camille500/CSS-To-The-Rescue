@@ -84,7 +84,7 @@ form.chat > [for="field-message"] {
 }
 
 form.chat > textarea:focus {
-  border: 4px #2ecc71 solid;
+  border: .4em #2ecc71 solid;
   outline: none;
 }
 
@@ -137,7 +137,7 @@ form.login input {
 }
 
 form.login > input:focus {
-  border: 4px #2ecc71 solid;
+  border: .4em #2ecc71 solid;
   outline: none;
 }
 
