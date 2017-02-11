@@ -2,14 +2,27 @@
 ------------------------------------------------*/
 body {
   box-sizing: border-box;
-  border: none;
   font-family: 'Open Sans', sans-serif;
   font-size: 1em;
 }
 
+button[type="submit"] {
+  width: 100%;
+  padding: .5em 0;
+  margin-top: 1em;
+  border: none;
+  background-color: #e74c3c;
+  color: white;
+  font-size: 1em;
+}
+
+.hidden {
+  visibility: hidden;
+}
+
 /* CHAT
 ------------------------------------------------*/
-ol.chat {
+.chat ol {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -24,36 +37,50 @@ ol.chat {
   list-style: none;
 }
 
-ol.chat li > p {
+.chat li > p {
+  width: 75%;
   padding: 1em;
-  margin: 1.5em 0 0;
+  margin: 2em 0 0 0;
   border-radius: .5em;
   background-color: white;
 }
 
-ol.chat footer > p {
+.chat .your-message > p {
+  background: #bdc3c7;
+  margin-left: 2em;
+}
+
+.chat footer > p {
   display: inline-block;
-  margin: .5em 0 0 1em;
+  margin: .5em 0 0 .75em;
   font-size: .7em;
 }
 
-ol.chat li footer > [data-status="READ"] {
+.your-message footer > p {
+  display: inline-block;
+  margin: .5em 0 0 3.5em;
+  font-size: .7em;
+}
+
+.chat footer > [data-status="READ"] {
   position: relative;
-  left: 3.5em;
+  left: 1.8em;
+  margin: 0;
   color: #2ecc71;
 }
 
-ol.chat li footer > [data-status="DELIVERED"] {
+.chat footer > [data-status="DELIVERED"] {
   position: relative;
-  left: 2em;
+  left: .5em;
+  margin: 0;
   color: #e74c3c;
 }
 
-ol.chat > time {
+.chat > time {
   color: #34495e;
 }
 
-form.chat {
+.chat > form {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -69,41 +96,30 @@ form.chat {
   background-color: #2980b9;
 }
 
-form.chat > textarea {
+.chat > textarea {
   resize: none;
+  height: 4em;
   width: 100%;
   padding: 1em 1em;
+  border: .3em solid #2980b9;
 }
 
-form.chat > textarea {
+.chat > textarea:focus {
+  border: .3em solid #2ecc71;
+  outline: none;
+  color: #2ecc71;
+  box-shadow: inset 0 0 1em #cccccc;
+}
+
+.chat > label {
   margin-bottom: .5em;
   color: white;
   font-size: .8em;
 }
 
-form.chat > textarea:focus {
-  border: .4em #2ecc71 solid;
-  outline: none;
-}
-
-form.chat button[type="submit"] {
-  width: 100%;
-  padding: .5em 0;
-  margin-top: 1em;
-  background-color: #e74c3c;
-  color: white;
-  font-size: 1em;
-}
-
-form.chat > label {
-  margin-bottom: .5em;
-  color: white;
-  font-size: .9em;
-}
-
 /* LOGIN
 ------------------------------------------------*/
-form.login {
+.login {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -115,7 +131,7 @@ form.login {
   background-color: #ecf0f1;
 }
 
-form.login a {
+.login a {
   -ms-flex-preferred-size: 40%;
       flex-basis: 40%;
   margin-top: .15em;
@@ -126,35 +142,33 @@ form.login a {
   text-align: right;
 }
 
-form.login label {
+.login label {
   -ms-flex-preferred-size: 100%;
       flex-basis: 100%;
   margin-bottom: .5em;
+  margin-left: .15em;
 }
 
-form.login input {
+.login input {
   -ms-flex-preferred-size: 100%;
       flex-basis: 100%;
   padding: .75em .5em;
   margin-bottom: 1em;
   font-size: 1.1em;
+  border: .2em solid #ecf0f1;
 }
 
-form.login > input:focus {
-  border: .4em #2ecc71 solid;
+.login > input:focus {
   outline: none;
+  color: #2ecc71;
+  border: .2em solid #2ecc71;
 }
 
-form.login button[type="submit"] {
-  -ms-flex-preferred-size: 100%;
-      flex-basis: 100%;
+.login button[type="submit"] {
   padding: 1em;
-  background-color: #e74c3c;
-  color: white;
-  font-size: 1em;
 }
 
-form.login [for="field-stay-logged-in"] {
+.login [for="field-stay-logged-in"] {
   -ms-flex-preferred-size: 35%;
       flex-basis: 35%;
   margin-left: .2em;
@@ -162,14 +176,14 @@ form.login [for="field-stay-logged-in"] {
   font-size: .9em;
 }
 
-form.login [type="checkbox"] {
+.login [type="checkbox"] {
   -ms-flex-preferred-size: auto;
       flex-basis: auto;
 }
 
 /* MEDIA ITEM
 ------------------------------------------------*/
-article.media-item {
+.media-item {
   max-width: 40em;
   padding: 1em;
   padding-bottom: 1.5em;
@@ -177,24 +191,24 @@ article.media-item {
   background-color: #ecf0f1;
 }
 
-article.media-item > h1 {
+.media-item > h1 {
   padding: .5em;
   margin-top: 0;
   background-color: #2980b9;
   font-size: 1.3em;
 }
 
-article.media-item h1 > a {
+.media-item h1 > a {
   color: white;
   text-decoration: none;
 }
 
-article.media-item > p {
+.media-item > p {
   max-width: 100%;
   text-align: start;
 }
 
-article.media-item > img {
+.media-item > img {
   max-width: -webkit-min-content;
   max-width: -moz-min-content;
   max-width: min-content;
@@ -204,7 +218,7 @@ article.media-item > img {
 
 /* MEDIA ITEM SUBTITLE
 ------------------------------------------------*/
-article.media-subtitle {
+.media-subtitle {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -218,31 +232,27 @@ article.media-subtitle {
   background-color: #ecf0f1;
 }
 
-article.media-subtitle > h1 {
+.media-subtitle > h1 {
   margin: 0;
   margin-left: 1.5em;
   color: #e74c3c;
 }
 
-article.media-subtitle figure a > img,
-article.media-subtitle figure > p {
+.media-subtitle figure img,
+.media-subtitle figure > p {
   max-width: 100%;
 }
 
-article.media-subtitle footer > time {
+.media-subtitle footer > time {
   color: #2c3e50;
 }
 
-article.media-subtitle footer > a {
+.media-subtitle footer > a {
   float: right;
   color: #2980b9;
 }
 
-.hidden {
-  visibility: hidden;
-}
-
-article.media-subtitle figure > div:target {
+.media-subtitle div:target {
   visibility: visible;
   position: absolute;
   left:0;
@@ -252,39 +262,11 @@ article.media-subtitle figure > div:target {
   background-color: rgba(0, 0, 0, 0.64);
 }
 
-article.media-subtitle figure div#big-image > img {
-  position: absolute;
-  top: 4vh;
-  left: 20vw;
-  max-width: 55%;
-}
-
-article.media-subtitle figure div#big-image a > p {
+.media-subtitle figure div#big-image a > p {
   position: absolute;
   top: 2%;
   left: 77%;
   color: white;
-}
-
-@media screen and (max-width: 56em) {
-  article.media-subtitle figure div#big-image > img {
-  max-width: 65%;
-  }
-  article.media-subtitle figure div#big-image a > p {
-    top: 2%;
-    left: 88%;
-  }
-}
-
-@media screen and (max-width: 44em) {
-  article.media-subtitle figure div#big-image > img {
-  left: 7vw;
-  max-width: 80%;
-  }
-  article.media-subtitle figure div#big-image a > p {
-    top: 40%;
-    left: 35%;
-  }
 }
 
 .hint {
@@ -305,7 +287,7 @@ article.media-subtitle figure div#big-image a > p {
 
 /* NAVIGATION
 ------------------------------------------------*/
-nav.navigation {
+.navigation {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -317,13 +299,13 @@ nav.navigation {
   background-color: #ecf0f1;
 }
 
-nav.navigation > h1 {
+.navigation > h1 {
   color: #2c3e50;
   margin-top: 1.35em;
   font-size: 1.3em;
 }
 
-nav.navigation > ul {
+.navigation > ul {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -335,7 +317,7 @@ nav.navigation > ul {
   list-style: none;
 }
 
-nav.navigation ul li > a {
+.navigation li > a {
   display: block;
   padding: .8em 1.65em;
   margin-right: 1em;
@@ -344,31 +326,31 @@ nav.navigation ul li > a {
   text-decoration: none;
 }
 
-nav.navigation ul li > ul {
+nav.navigation li > ul {
   position: absolute;
   display: none;
   padding: 0;
   list-style: none;
 }
 
-nav.navigation ul li ul li > a {
+nav.navigation li ul a {
   max-width: 100%;
   padding-right: 1em;
   background-color: #219ef2;
   color: white;
 }
 
-nav.navigation ul li > [aria-label="Home, current page"] {
+.navigation li > [aria-label="Home, current page"] {
   background-color: #e74c3c;
   color: white;
 }
 
-nav.navigation ul li > a:hover,
-nav.navigation ul li ul li > a:hover {
+.navigation li > a:hover,
+.navigation li ul > a:hover {
   background-color: #2980b9;
 }
 
-nav.navigation ul li.dropdown:hover > ul {
+.dropdown:hover > ul {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -379,13 +361,13 @@ nav.navigation ul li.dropdown:hover > ul {
 }
 
 @media only screen and (max-width: 41.75em) {
-  nav.navigation {
+  .navigation {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
   }
-  nav.navigation > ul {
+  .navigation > ul {
     display: block;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -393,7 +375,7 @@ nav.navigation ul li.dropdown:hover > ul {
             flex-direction: column;
     padding-left: 0;
   }
-  nav.navigation ul li > ul {
+  .navigation li > ul {
     position: static;
   }
 }
@@ -410,7 +392,7 @@ legend {
   text-align: center;
 }
 
-div.rating {
+.rating {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -427,7 +409,7 @@ div.rating {
   background-color: #ecf0f1;
 }
 
-div.rating > label {
+.rating > label {
   -ms-flex-preferred-size: 10%;
       flex-basis: 10%;
   padding-top: .5em;
@@ -435,25 +417,25 @@ div.rating > label {
   text-align: center;
 }
 
-div.rating label > svg {
+.rating svg {
   -webkit-transition: .5s;
   transition: .5s;
   min-width: 5em;
   margin-top: 1em;
 }
 
-div.rating label > svg:hover {
+.rating svg:hover {
   -webkit-transition: .5s;
   transition: .5s;
   min-width: 6em;
   cursor: pointer;
 }
 
-div.rating label:hover {
+.rating label:hover {
   font-weight: 800;
 }
 
-div.rating > [type="radio"] {
+.rating > [type="radio"] {
   display: none;
 }
 
@@ -469,35 +451,35 @@ div.rating > [type="radio"] {
 }
 /* STEP INDICATOR
 ------------------------------------------------*/
-nav.step-indicator {
+.step-indicator {
   max-width: 35em;
   padding: 1em;
   margin: 2em auto 0 auto;
   background-color: #ecf0f1;
 }
 
-nav.step-indicator > h1 {
+.step-indicator > h1 {
   margin-bottom: 1em;
   font-size: 1.3em;
   text-transform: uppercase;
   text-align: center;
 }
 
-nav.step-indicator > progress {
+.step-indicator > progress {
   width: 100%;
   height: 2em;
   border: 0;
   background-color: #fff;
 }
 
-nav.step-indicator > progress::-webkit-progress-bar {
+.step-indicator > progress::-webkit-progress-bar {
   background-color: #bdc3c7;
 }
-nav.step-indicator > progress::-webkit-progress-value {
+.step-indicator > progress::-webkit-progress-value {
   background-color: #3498db;
 }
 
-nav.step-indicator > ol {
+.step-indicator > ol {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -515,14 +497,14 @@ nav.step-indicator > ol {
   list-style-type: none;
 }
 
-nav.step-indicator ol > li {
+.step-indicator li {
   width: 20%;
   padding: 1em .2em;
   background-color: white;
   text-align: center;
 }
 
-nav.step-indicator ol li > a {
+nav.step-indicator li > a {
   color: #27ae60;
   text-decoration: none;
 }
