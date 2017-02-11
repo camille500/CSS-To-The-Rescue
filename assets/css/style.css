@@ -24,7 +24,7 @@ ol.chat {
   list-style: none;
 }
 
-ol.chat > li > p {
+ol.chat li > p {
   padding: 1em;
   margin: 1.5em 0 0;
   border-radius: .5em;
@@ -37,13 +37,13 @@ ol.chat footer > p {
   font-size: .7em;
 }
 
-ol.chat > [data-status="READ"] {
+ol.chat li footer > [data-status="READ"] {
   position: relative;
   left: 3.5em;
   color: #2ecc71;
 }
 
-ol.chat > [data-status="DELIVERED"] {
+ol.chat li footer > [data-status="DELIVERED"] {
   position: relative;
   left: 2em;
   color: #e74c3c;
@@ -69,13 +69,13 @@ form.chat {
   background-color: #2980b9;
 }
 
-form.chat > [name="field-message"] {
+form.chat > textarea {
   resize: none;
   width: 100%;
   padding: 1em 1em;
 }
 
-form.chat > [for="field-message"] {
+form.chat > textarea {
   margin-bottom: .5em;
   color: white;
   font-size: .8em;
@@ -93,6 +93,12 @@ form.chat button[type="submit"] {
   background-color: #e74c3c;
   color: white;
   font-size: 1em;
+}
+
+form.chat > label {
+  margin-bottom: .5em;
+  color: white;
+  font-size: .9em;
 }
 
 /* LOGIN
