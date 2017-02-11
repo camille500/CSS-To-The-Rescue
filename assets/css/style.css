@@ -541,6 +541,7 @@ section {
 
 section.intro {
   color: white;
+  padding-left: 1em;
 }
 
 section#media-subtitle {
