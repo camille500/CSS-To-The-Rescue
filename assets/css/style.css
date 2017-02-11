@@ -1,3 +1,7 @@
+/* Sources
+  - http://stackoverflow.com/questions/796087/make-a-div-into-a-link
+  - https://css-tricks.com/snippets/css/a-guide-to-flexbox/ */
+
 /* GENERIC
 ------------------------------------------------*/
 body {
@@ -23,13 +27,8 @@ button[type="submit"] {
 /* CHAT
 ------------------------------------------------*/
 .chat ol {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  flex-direction: column;
   max-width: 18em;
   padding: .5em 1em 2em 1em;
   margin: 2em auto 0 auto;
@@ -81,15 +80,9 @@ button[type="submit"] {
 }
 
 .chat > form {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+  flex-direction: row;
+  flex-wrap: wrap;
   max-width: 18em;
   padding: 1em;
   margin: 0em auto;
@@ -120,11 +113,8 @@ button[type="submit"] {
 /* LOGIN
 ------------------------------------------------*/
 .login {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+  flex-wrap: wrap;
   max-width: 20em;
   padding: 2em;
   margin: 2em auto 0 auto;
@@ -132,8 +122,7 @@ button[type="submit"] {
 }
 
 .login a {
-  -ms-flex-preferred-size: 40%;
-      flex-basis: 40%;
+  flex-basis: 40%;
   margin-top: .15em;
   margin-left: 2.2em;
   color: #e67e22;
@@ -143,15 +132,13 @@ button[type="submit"] {
 }
 
 .login label {
-  -ms-flex-preferred-size: 100%;
-      flex-basis: 100%;
+  flex-basis: 100%;
   margin-bottom: .5em;
   margin-left: .15em;
 }
 
 .login input {
-  -ms-flex-preferred-size: 100%;
-      flex-basis: 100%;
+  flex-basis: 100%;
   padding: .75em .5em;
   margin-bottom: 1em;
   font-size: 1.1em;
@@ -169,16 +156,14 @@ button[type="submit"] {
 }
 
 .login [for="field-stay-logged-in"] {
-  -ms-flex-preferred-size: 35%;
-      flex-basis: 35%;
+  flex-basis: 35%;
   margin-left: .2em;
   margin-top: .15em;
   font-size: .9em;
 }
 
 .login [type="checkbox"] {
-  -ms-flex-preferred-size: auto;
-      flex-basis: auto;
+  flex-basis: auto;
 }
 
 /* MEDIA ITEM
@@ -193,12 +178,17 @@ button[type="submit"] {
 
 .media-item > h1 {
   padding: .5em;
+  padding-bottom: 1.65em;
   margin-top: 0;
   background-color: #2980b9;
   font-size: 1.3em;
 }
 
 .media-item h1 > a {
+  position: absolute;
+  display: block;
+  width: 100%;
+  height: 8.5em;
   color: white;
   text-decoration: none;
 }
@@ -216,16 +206,21 @@ button[type="submit"] {
   float: left;
 }
 
+@media only screen and (max-width: 39.4em) {
+  .media-item h1 > a {
+    width: 90%;
+    height: 8.5em;
+  }
+  .media-item > h1 {
+    padding-bottom: 3em;
+  }
+}
+
 /* MEDIA ITEM SUBTITLE
 ------------------------------------------------*/
 .media-subtitle {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  flex-direction: column;
   max-width: 35em;
   padding: 1.5em .75em;
   margin: 0 auto 0 auto;
@@ -288,13 +283,8 @@ button[type="submit"] {
 /* NAVIGATION
 ------------------------------------------------*/
 .navigation {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
+  flex-direction: row;
   padding: .15em 1em;
   background-color: #ecf0f1;
 }
@@ -306,14 +296,8 @@ button[type="submit"] {
 }
 
 .navigation > ul {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  /*flex-wrap: wrap;*/
+  flex-direction: row;
   list-style: none;
 }
 
@@ -331,6 +315,7 @@ nav.navigation li > ul {
   display: none;
   padding: 0;
   list-style: none;
+  z-index: 1000;
 }
 
 nav.navigation li ul a {
@@ -351,28 +336,17 @@ nav.navigation li ul a {
 }
 
 .dropdown:hover > ul {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  flex-direction: column;
 }
 
 @media only screen and (max-width: 41.75em) {
   .navigation {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
+    flex-direction: column;
   }
   .navigation > ul {
     display: block;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
+    flex-direction: column;
     padding-left: 0;
   }
   .navigation li > ul {
@@ -393,16 +367,9 @@ legend {
 }
 
 .rating {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  flex-direction: row;
+  justify-content: space-between;
   max-width: 35em;
   padding: 1em;
   margin: 0 auto;
@@ -410,8 +377,7 @@ legend {
 }
 
 .rating > label {
-  -ms-flex-preferred-size: 10%;
-      flex-basis: 10%;
+  flex-basis: 10%;
   padding-top: .5em;
   font-weight: 500;
   text-align: center;
@@ -480,18 +446,10 @@ legend {
 }
 
 .step-indicator > ol {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
   padding: 0;
   margin-top: 2em;
   list-style-type: none;
