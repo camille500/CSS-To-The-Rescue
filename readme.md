@@ -32,7 +32,7 @@ To get an better understanding of CSS, I've bought the book 'CSS Secrets' from L
 
 <div id="showDiv>
 
-	<h1>Here is the div
+	<h1>Here is the div</h1>
 
 </div>
 ```
