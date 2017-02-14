@@ -36,6 +36,10 @@ ul {
   list-style-type: none;
 }
 
+section {
+  margin-bottom: 1.75em;
+}
+
 /* Button */
 [role="button"] {
   margin-left: auto;
@@ -134,8 +138,8 @@ input[type="checkbox"]:focus + label::before {
 main {
   display: flex;
   flex-wrap: wrap;
-  justify-content: flex-start;
-  padding: .5em;
+  justify-content: space-around;
+  padding: 1.5em;
 }
 
 @media screen and (max-width: 53.12em) {
@@ -147,7 +151,7 @@ main {
 /* Step Indicator
 ------------------------------------------------*/
 .step-indicator {
-  width: 100%;
+  width: 97.5%;
   background-color: #1C1B20;
 }
 
@@ -163,7 +167,7 @@ main {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: space-around;
   padding-left: .05em;
   margin-top: 1.5em;
   list-style: none;
@@ -202,14 +206,14 @@ main {
 
 @media screen and (min-width: 53.12em) {
   .step-indicator {
-    width: 50%;
+    width: 47.5%;
   }
 }
 
 /* Rating
 ------------------------------------------------*/
 .rating {
-  width: 100%;
+  width: 97.5%;
   background-color: #ecf0f1;
   padding-bottom: .85em;
 }
@@ -274,14 +278,14 @@ main {
 
 @media screen and (min-width: 53.12em) {
   .rating {
-    width: 50%;
+    width: 47.5%;
   }
 }
 
 /* Login
 ------------------------------------------------*/
 .login {
-  width: 45%;
+  width: 55%;
 }
 
 .login form {
@@ -325,13 +329,54 @@ main {
   flex-basis: auto;
 }
 
+@media screen and (min-width: 62.5em) {
+  .login {
+    width: 47.5%;
+  }
+}
+
+@media screen and (max-width: 37.5em) {
+  .login {
+    width: 97.5%;
+  }
+}
+
+/* Media item
+------------------------------------------------*/
+.chat {
+  width: 42.5%;
+  background-color: #F4C132;
+}
+
+.chat ol {
+
+}
+
+@media screen and (min-width: 62.5em) {
+  .chat {
+    width: 47.5%;
+  }
+}
+
+@media screen and (max-width: 37.5em) {
+  .chat {
+    width: 97.5%;
+  }
+}
+
 /* Media item
 ------------------------------------------------*/
 .media-item {
-  width: 27.5%;
+  width: 47.5%;
   background-color: #ecf0f1;
 }
 
 .media-item article {
   padding: 1em;
+}
+
+@media screen and (max-width: 37.5em) {
+  .media-item {
+    width: 97.5%;
+  }
 }
