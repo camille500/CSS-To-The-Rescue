@@ -1,0 +1,255 @@
+/* Sources
+  - https://www.smashingmagazine.com/2016/11/css-inheritance-cascade-global-scope-new-old-worst-best-friends/
+  - CSS Secrets - Lea Verou
+*/
+
+/* GENERIC
+------------------------------------------------*/
+* {
+  font-family: inherit;
+}
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 1em;
+}
+
+h1, h2, h3, h4, h5 {
+  margin-top: 0;
+  font-family: 'Quicksand', serif;
+}
+
+a {
+  padding: .2em;
+  border: .2em transparent solid;
+  text-decoration: none;
+}
+
+a:focus {
+  outline: none;
+  padding: .2em;
+  border: .2em #f1c40f solid;
+}
+
+ul {
+  list-style-type: none;
+}
+
+/* Button */
+[role="button"] {
+  margin-left: auto;
+  height: 2.5em;
+  width: 100%;
+  margin-top: 1.5em;
+  border: none;
+  background-color: #4886ff;
+  color: white;
+  font-size: 1.15em;
+  border: .25em #f1c40f transparent;
+}
+[role="button"]:hover {
+  background-color: #3F77E4;
+}
+
+[role="button"]:focus {
+  outline: none;
+  border: .25em #f1c40f solid;
+}
+
+input {
+  border: .25em transparent solid;
+}
+input:focus {
+  outline: none;
+  border: .25em #f1c40f solid;
+}
+
+/* Checkbox */
+input[type="checkbox"] {
+  position: absolute;
+  clip: rect(0,0,0,0);
+}
+
+input[type="checkbox"] + label::before {
+  content: '\a0';
+  display: inline-block;
+  width: 1.25em;
+  height: 1.25em;
+  margin-right: .75em;
+  border-radius: .2em;
+  background-color: #fff;
+  text-indent: .15em;
+  line-height: 1.25;
+  border: .25em solid transparent;
+}
+
+input[type="checkbox"]:checked + label::before {
+  content: '\2713';
+  background-color: #2ecc71;
+  color: white;
+}
+
+input[type="checkbox"]:focus + label::before {
+  border: .25em #f1c40f solid;
+}
+
+/* Navigation
+------------------------------------------------*/
+
+
+/* Main container
+------------------------------------------------*/
+main {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  padding: 2em;
+}
+
+/* Step Indicator
+------------------------------------------------*/
+.step-indicator {
+  width: 100%;
+  background-color: #1C1B20;
+}
+
+.step-indicator nav {
+  display: flex;
+  flex-direction: column;
+  padding: 1em;
+  color: white;
+}
+
+.step-indicator ol {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding-left: .05em;
+  margin-top: 1.5em;
+  list-style: none;
+  counter-reset: section;
+}
+
+.step-indicator li:before {
+  counter-increment: section;
+  content: "("counter(section)")";
+  padding-right: .4em;
+}
+
+.step-indicator progress {
+  width: 100%;
+  height: 2em;
+  border: 0;
+  background-color: #fff;
+}
+
+.step-indicator progress::-webkit-progress-bar {
+  background-color: #ecf0f1;
+}
+.step-indicator progress::-webkit-progress-value {
+  background-color: #e74c3c;
+}
+
+.step-indicator a {
+  color: white;
+  text-decoration: underline;
+}
+
+.step-indicator [aria-label="Address, current step"] {
+  color: #FCDD09;
+  font-weight: 800;
+}
+
+@media screen and (min-width: 53.12em) {
+  .step-indicator {
+    width: 50%;
+  }
+}
+
+/* Rating
+------------------------------------------------*/
+.rating {
+  width: 100%;
+  height: 10em;
+  background-color: #ecf0f1;
+  padding-bottom: .85em;
+}
+
+.rating > div {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  max-width: 100%;
+  padding: 1em;
+}
+
+.rating svg {
+  height: 3.5em;
+  max-width: 3.5em;
+  margin-top: 1em;
+}
+
+@media screen and (min-width: 53.12em) {
+  .rating {
+    width: 50%;
+  }
+}
+
+/* Login
+------------------------------------------------*/
+.login {
+  width: 55%;
+}
+
+.login form {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 2em;
+  background-color: #2b366b;
+}
+
+.login a {
+  position: absolute;
+  top: 14.5em;
+  right: 2em;
+  flex-basis: 26%;
+  text-align: right;
+  color: #fcdd09;
+  font-weight: 800;
+}
+
+.login label {
+  flex-basis: 100%;
+  margin-bottom: .5em;
+  color: #fff;
+  font-weight: 800;
+}
+
+.login input {
+  flex-basis: 100%;
+  height: 2.5em;
+  padding: 0.25em .75em;
+  margin-bottom: 1em;
+  font-size: inherit;
+}
+
+.login [for="field-stay-logged-in"] {
+  flex-basis: 35%;
+}
+
+.login [type="checkbox"] {
+  flex-basis: auto;
+}
+
+/* Media item
+------------------------------------------------*/
+.media-item {
+  width: 45%;
+  background-color: #ecf0f1;
+}
+
+.media-item article {
+  padding: 1em;
+}
