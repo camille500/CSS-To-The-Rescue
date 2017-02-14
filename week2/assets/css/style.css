@@ -10,6 +10,7 @@
 }
 
 body {
+  margin: 0;
   font-family: 'Open Sans', sans-serif;
   font-size: 1em;
 }
@@ -70,17 +71,48 @@ input[type="checkbox"] {
   clip: rect(0,0,0,0);
 }
 
+input[type="radio"] {
+  position: absolute;
+  clip: rect(0,0,0,0);
+}
+
 input[type="checkbox"] + label::before {
   content: '\a0';
   display: inline-block;
-  width: 1.25em;
-  height: 1.25em;
+  width: 1.2em;
   margin-right: .75em;
   border-radius: .2em;
   background-color: #fff;
   text-indent: .15em;
   line-height: 1.25;
   border: .25em solid transparent;
+}
+
+input[type="radio"] + label::before {
+  transition: .25s;
+  content: '\a0';
+  display: inline-block;
+  width: 4em;
+  height: 4em;
+}
+
+input[type="radio"]:hover + label::before {
+  transition: .25s;
+  content: '\a0';
+  display: inline-block;
+  width: 5em;
+  height: 5em;
+  border-radius: 100%;
+}
+
+input[type="radio"]:checked + label::before {
+  transition: .25s;
+  content: '\a0';
+  display: inline-block;
+  width: 5.5em;
+  height: 5.5em;
+  border: .2em solid #1C1B20;
+  border-radius: 100%;
 }
 
 input[type="checkbox"]:checked + label::before {
@@ -103,7 +135,13 @@ main {
   display: flex;
   flex-wrap: wrap;
   justify-content: flex-start;
-  padding: 2em;
+  padding: .5em;
+}
+
+@media screen and (max-width: 53.12em) {
+  main {
+    padding: 0;
+  }
 }
 
 /* Step Indicator
@@ -116,6 +154,7 @@ main {
 .step-indicator nav {
   display: flex;
   flex-direction: column;
+  flex-wrap: wrap;
   padding: 1em;
   color: white;
 }
@@ -171,7 +210,6 @@ main {
 ------------------------------------------------*/
 .rating {
   width: 100%;
-  height: 10em;
   background-color: #ecf0f1;
   padding-bottom: .85em;
 }
@@ -179,15 +217,59 @@ main {
 .rating > div {
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: space-around;
   max-width: 100%;
   padding: 1em;
+  padding-top: .5em;
 }
 
 .rating svg {
   height: 3.5em;
   max-width: 3.5em;
   margin-top: 1em;
+}
+
+.rating svg:hover {
+  height: 4em;
+  max-width: 4em;
+}
+
+.rated:focus + svg {
+  height: 4em;
+}
+
+.rating legend {
+  width: 100%;
+  padding: .6em 0;
+  background-color: #FF5851;
+  color: white;
+  font-size: 1.25em;
+  text-align: center;
+}
+
+.rating legend:before {
+  content: '';
+  margin-left: .6em;
+}
+
+.rating label {
+  padding-top: .75em;
+}
+
+#rating-0 + label::before {
+  background: url('images/angry.svg') 0px center no-repeat;
+}
+
+#rating-1 + label::before {
+  background: url('images/meh.svg') 0px center no-repeat;
+}
+
+#rating-2 + label::before {
+  background: url('images/nice.svg') 0px center no-repeat;
+}
+
+#rating-3 + label::before {
+  background: url('images/fantastical.svg') 0px center no-repeat;
 }
 
 @media screen and (min-width: 53.12em) {
@@ -199,7 +281,7 @@ main {
 /* Login
 ------------------------------------------------*/
 .login {
-  width: 55%;
+  width: 45%;
 }
 
 .login form {
@@ -246,7 +328,7 @@ main {
 /* Media item
 ------------------------------------------------*/
 .media-item {
-  width: 45%;
+  width: 27.5%;
   background-color: #ecf0f1;
 }
 
