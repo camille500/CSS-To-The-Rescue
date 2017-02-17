@@ -45,7 +45,7 @@ section {
   margin-left: auto;
   height: 2.5em;
   width: 100%;
-  margin-top: 1.5em;
+  margin-top: 1em;
   border: none;
   background-color: #4886ff;
   color: white;
@@ -64,9 +64,10 @@ section {
 input {
   border: .25em transparent solid;
 }
-input:focus {
+input:focus,
+.chat textarea:focus {
   outline: none;
-  border: .25em #f1c40f solid;
+  border: .35em #f1c40f solid;
 }
 
 /* Checkbox */
@@ -135,6 +136,7 @@ header nav  {
   display: flex;
   flex-direction: row;
   padding: .15em 1em;
+  margin-bottom: 2em;
   background-color: #3498db;
 }
 
@@ -377,7 +379,7 @@ main {
 /* Login
 ------------------------------------------------*/
 .login {
-  width: 55%;
+  width: 75%;
 }
 
 .login form {
@@ -436,54 +438,49 @@ main {
 /* Chat
 ------------------------------------------------*/
 .chat {
-  display: flex;
-  flex-direction: column;
   width: 47.5%;
   background-color: #8870FF;
 }
 
 .chat ol {
+  list-style: none;
+  display: flex;
+  justify-content: flex-end;
+  flex-direction: column;
   padding: 0;
 }
 
 .chat li > p {
   width: 55%;
   padding: 1em;
-  margin-left: 1.5em;
+  margin-left: 1em;
   margin-bottom: 0;
   border-radius: .5em;
   background-color: white;
 }
 
+.chat li.your-message p {
+    float: right;
+    margin-right: 2em;
+}
+
 .chat .your-message > p {
-  background: #ecf0f1;
-  margin: 0 1.5em 0 auto;
+  background-color: #34495e;
+  color: white;
 }
 
-.chat footer > p {
-  display: inline-block;
-  margin: .5em 0 0 .75em;
+.chat .your-message footer {
   font-size: .7em;
+  margin-right: 2em;
 }
 
-.your-message footer > p {
-  display: inline-block;
-  margin: .5em 0 0 17.5em;
+.chat footer {
   font-size: .7em;
+  margin-left: 2em;
 }
 
-.chat footer > [data-status="READ"] {
-  position: relative;
-  left: 1.8em;
-  margin: 0;
-  color: #2ecc71;
-}
-
-.chat footer > [data-status="DELIVERED"] {
-  position: relative;
-  left: .5em;
-  margin: 0;
-  color: #e74c3c;
+footer {
+  clear: both;
 }
 
 .chat > time {
@@ -500,19 +497,12 @@ main {
   background-color: #ECF0F1;
 }
 
-.chat > textarea {
+.chat form > textarea {
   resize: none;
   height: 4em;
-  width: 100%;
+  width: 95%;
   padding: 1em 1em;
-  border: .3em solid #2980b9;
-}
-
-.chat > textarea:focus {
-  border: .3em solid #2ecc71;
-  outline: none;
-  color: #2ecc71;
-  box-shadow: inset 0 0 1em #cccccc;
+  border: .35em solid transparent;
 }
 
 .chat form > label {
@@ -520,10 +510,31 @@ main {
   color: #000;
   font-size: .8em;
 }
+
+[data-status="DELIVERED"] {
+  color: white;
+}
+
+[data-status="READ"] {
+  color: #f1c40f;
+}
+
+@media screen and (max-width: 62.45em) {
+  .chat {
+    width: 85%;
+  }
+}
+
+@media screen and (max-width: 40em) {
+  .chat {
+    width: 95%;
+  }
+}
+
 /* Media item
 ------------------------------------------------*/
 .media-item {
-  width: 47.5%;
+  width: 27.5%;
   background-color: #ecf0f1;
 }
 
@@ -531,8 +542,31 @@ main {
   padding: 1em;
 }
 
-@media screen and (max-width: 37.5em) {
+@media screen and (max-width: 59.375em) {
   .media-item {
     width: 97.5%;
+  }
+}
+
+/* Media subtitle
+------------------------------------------------*/
+.media-subtitle {
+  width: 37.5%;
+  padding: 1em;
+  background-color: #34495e;
+  color: white;
+}
+
+.media-subtitle img {
+  max-width: 100%;
+}
+
+.media-subtitle h1 {
+  margin-left: 2em;
+}
+
+@media screen and (max-width: 59.375em) {
+  .media-subtitle {
+    width: 95%;
   }
 }
