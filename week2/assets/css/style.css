@@ -439,7 +439,7 @@ main {
 ------------------------------------------------*/
 .chat {
   width: 47.5%;
-  background-color: #8870FF;
+  background-color: #969696;
 }
 
 .chat ol {
@@ -539,7 +539,34 @@ footer {
 }
 
 .media-item article {
-  padding: 1em;
+  position: relative;
+}
+
+.media-item a {
+  position: absolute;
+  bottom: 12em;
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.83);
+  color: white;
+  z-index: 1000;
+}
+
+.media-item p {
+  padding: .25em 1em 0 1em;
+}
+
+.media-item.colored a {
+  background-color: rgba(172, 16, 16, 0.9);
+}
+
+.media-item img {
+  width: 100%;
+  filter: grayscale(100%);
+}
+
+.media-item.colored img {
+  width: 100%;
+  filter: none;
 }
 
 @media screen and (max-width: 59.375em) {
@@ -565,8 +592,51 @@ footer {
   margin-left: 2em;
 }
 
+.media-subtitle a {
+  color: #f1c40f;
+  float: right;
+}
+
+div#big-image {
+  display: none;
+}
+
+div#big-image:target {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 200%;
+  z-index: 1000;
+  background-color: rgba(0, 0, 0, 0.64);
+}
+
+div#big-image > img {
+  width: 50%;
+  position: absolute;
+  top: 10%;
+  left: 22.5%;
+}
+
+div#big-image p {
+  position: absolute;
+  top: 6%;
+  right: 27.5%;
+}
+
 @media screen and (max-width: 59.375em) {
   .media-subtitle {
     width: 95%;
+  }
+}
+
+@media screen and (max-width: 62.5em) {
+  div#big-image > img {
+    width: 75%;
+    left: 12.5%;
+  }
+  div#big-image p {
+    right: 17.5%;
   }
 }
