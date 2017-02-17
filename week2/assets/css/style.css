@@ -640,3 +640,65 @@ div#big-image p {
     right: 17.5%;
   }
 }
+
+/* Loaders
+------------------------------------------------*/
+.loaders {
+  width: 42.5%;
+  padding: 2em;
+  background-color: #e74c3c;
+}
+
+.loader {
+  display: block;
+  height: 5em;
+  width: 5em;
+  margin: 1.5em auto;
+  animation: animated-block 1.2s ease-in-out infinite;
+  background-color: #fff;
+}
+
+@keyframes animated-block {
+  0% {
+    transform: perspective(20em) rotateX(0deg) rotateY(0deg);
+  } 50% {
+    transform: perspective(20em) rotateX(-180deg) rotateY(0deg);
+  } 100% {
+    transform: perspective(20em) rotateX(-180deg) rotateY(-180deg);
+  }
+}
+
+@media screen and (max-width: 40.625em) {
+  .loaders {
+    width: 97.5%;
+  }
+}
+
+/* Typography
+------------------------------------------------*/
+@font-face {
+  font-family: Ampersand;
+  src: local('Baskerville'),
+       local('Lato');
+}
+
+.typo {
+  display: block;
+  padding: .5em;
+  width: 42.5%;
+  background-color: #3498db;
+}
+
+.typo h2 {
+  font-family: Ampersand, sans-serif;
+  text-align: center;
+  font-size: 4em;
+  margin-top: .75em;
+  color: white;
+}
+
+@media screen and (max-width: 40.625em) {
+  .typo {
+    width: 97.5%;
+  }
+}
