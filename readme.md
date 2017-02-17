@@ -3,8 +3,9 @@
 This read me contains all documentation and annotations made during the course.
 All sources I've used so far can be find at the bottom of this read me.
 
-## Link to the Live Version:
-https://camille500.github.io/CSS-To-The-Rescue/index.html
+## Links to the Live Versions:
+- [Week 1](https://camille500.github.io/CSS-To-The-Rescue/week1/)
+- [Week 2](https://camille500.github.io/CSS-To-The-Rescue/week2/)
 
 ## Annotations
 
