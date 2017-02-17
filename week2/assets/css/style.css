@@ -44,23 +44,22 @@ section {
 
 /* Button */
 [role="button"] {
-  margin-left: auto;
   height: 2.5em;
   width: 100%;
+  margin-left: auto;
   margin-top: 1em;
-  border: none;
+  border: .25em #f1c40f transparent;
   background-color: #4886ff;
   color: white;
   font-size: 1.15em;
-  border: .25em #f1c40f transparent;
 }
 [role="button"]:hover {
   background-color: #3F77E4;
 }
 
 [role="button"]:focus {
-  outline: none;
   border: .25em #f1c40f solid;
+  outline: none;
 }
 
 input {
@@ -68,8 +67,8 @@ input {
 }
 input:focus,
 .chat textarea:focus {
-  outline: none;
   border: .35em #f1c40f solid;
+  outline: none;
 }
 
 /* Checkbox */
@@ -88,11 +87,11 @@ input[type="checkbox"] + label::before {
   display: inline-block;
   width: 1.2em;
   margin-right: .75em;
+  border: .25em solid transparent;
   border-radius: .2em;
   background-color: #fff;
   text-indent: .15em;
   line-height: 1.25;
-  border: .25em solid transparent;
 }
 
 input[type="radio"] + label::before {
@@ -144,9 +143,9 @@ header nav  {
 
 [href="#home"]:focus {
   outline: none;
+  padding: 0;
   border: none;
   font-size: 1em;
-  padding: 0;
 }
 
 header nav > a {
@@ -158,9 +157,9 @@ header nav > a {
 }
 
 header nav a:focus {
-  outline: none;
   padding: .5em 1.5em;
   border: .2em #f1c40f solid;
+  outline: none;
 }
 
 [aria-label="Home"] {
@@ -176,8 +175,8 @@ header nav  > ul {
 
 header nav li > a {
   display: block;
-  padding: .5em 1.5em;
   margin-right: 1em;
+  padding: .5em 1.5em;
   border: 2px solid #ecf0f1;
   color: #fff;
   text-decoration: none;
@@ -187,15 +186,15 @@ header nav li > ul {
   position: absolute;
   display: none;
   padding: 0;
-  list-style: none;
   margin-top: .25em;
+  list-style: none;
   z-index: 1000;
 }
 
 header nav li ul a {
   max-width: 100%;
-  margin-bottom: .25em;
   padding-right: 1em;
+  margin-bottom: .25em;
   background-color: #219ef2;
   color: white;
 }
@@ -271,9 +270,9 @@ main {
 }
 
 .step-indicator li:before {
+  padding-right: .4em;
   counter-increment: section;
   content: "("counter(section)")";
-  padding-right: .4em;
 }
 
 .step-indicator progress {
@@ -310,8 +309,8 @@ main {
 ------------------------------------------------*/
 .rating {
   width: 97.5%;
-  background-color: #ecf0f1;
   padding-bottom: .85em;
+  background-color: #ecf0f1;
 }
 
 .rating > div {
@@ -472,13 +471,13 @@ main {
 }
 
 .chat .your-message footer {
-  font-size: .7em;
   margin-right: 2em;
+  font-size: .7em;
 }
 
 .chat footer {
-  font-size: .7em;
   margin-left: 2em;
+  font-size: .7em;
 }
 
 footer {
@@ -493,8 +492,8 @@ footer {
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
-  padding: 1.1em 2.5%;
   width: 95%;
+  padding: 1.1em 2.5%;
   margin: 0em auto;
   background-color: #ECF0F1;
 }
@@ -547,9 +546,9 @@ footer {
 .media-item a {
   position: absolute;
   bottom: 12em;
-  text-align: center;
   background-color: rgba(0, 0, 0, 0.83);
   color: white;
+  text-align: center;
   z-index: 1000;
 }
 
@@ -595,8 +594,8 @@ footer {
 }
 
 .media-subtitle a {
-  color: #f1c40f;
   float: right;
+  color: #f1c40f;
 }
 
 div#big-image {
@@ -610,8 +609,8 @@ div#big-image:target {
   left: 0;
   width: 100%;
   height: 200%;
-  z-index: 1000;
   background-color: rgba(0, 0, 0, 0.64);
+  z-index: 1000;
 }
 
 div#big-image > img {
@@ -656,8 +655,8 @@ div#big-image p {
   height: 5em;
   width: 5em;
   margin: 1.5em auto;
-  animation: animated-block 1.2s ease-in-out infinite;
   background-color: #fff;
+  animation: animated-block 1.2s ease-in-out infinite;
 }
 
 @keyframes animated-block {
@@ -686,17 +685,17 @@ div#big-image p {
 
 .typo {
   display: block;
-  padding: .5em;
   width: 42.5%;
+  padding: .5em;
   background-color: #3498db;
 }
 
 .typo h2 {
+  margin-top: .75em;
+  color: white;
   font-family: Ampersand, sans-serif;
   text-align: center;
   font-size: 4em;
-  margin-top: .75em;
-  color: white;
 }
 
 @media screen and (max-width: 40.625em) {
