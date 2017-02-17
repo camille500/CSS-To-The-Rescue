@@ -435,56 +435,91 @@ main {
 
 /* Chat
 ------------------------------------------------*/
-.chat ol {
+.chat {
   display: flex;
   flex-direction: column;
+  width: 47.5%;
+  background-color: #8870FF;
+}
+
+.chat ol {
   padding: 0;
 }
 
-.chat p {
-  border-radius: .75em;
-  width: 50%;
+.chat li > p {
+  width: 55%;
   padding: 1em;
-  margin-left: 1em;
-  background-color: grey;
+  margin-left: 1.5em;
+  margin-bottom: 0;
+  border-radius: .5em;
+  background-color: white;
 }
 
-.your-message p {
-  margin-left: auto;
-  margin-right: 1em;
-  background-color: white;
-  padding: 1em;
+.chat .your-message > p {
+  background: #ecf0f1;
+  margin: 0 1.5em 0 auto;
 }
 
 .chat footer > p {
-  padding: 0;
+  display: inline-block;
+  margin: .5em 0 0 .75em;
+  font-size: .7em;
+}
+
+.your-message footer > p {
+  display: inline-block;
+  margin: .5em 0 0 17.5em;
+  font-size: .7em;
+}
+
+.chat footer > [data-status="READ"] {
+  position: relative;
+  left: 1.8em;
   margin: 0;
-  background-color: transparent;
+  color: #2ecc71;
 }
 
-/* Media item
-------------------------------------------------*/
-.chat {
-  width: 42.5%;
-  background-color: #F4C132;
+.chat footer > [data-status="DELIVERED"] {
+  position: relative;
+  left: .5em;
+  margin: 0;
+  color: #e74c3c;
 }
 
-.chat ol {
-
+.chat > time {
+  color: #34495e;
 }
 
-@media screen and (min-width: 62.5em) {
-  .chat {
-    width: 47.5%;
-  }
+.chat > form {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  padding: 1.1em 2.5%;
+  width: 95%;
+  margin: 0em auto;
+  background-color: #ECF0F1;
 }
 
-@media screen and (max-width: 37.5em) {
-  .chat {
-    width: 97.5%;
-  }
+.chat > textarea {
+  resize: none;
+  height: 4em;
+  width: 100%;
+  padding: 1em 1em;
+  border: .3em solid #2980b9;
 }
 
+.chat > textarea:focus {
+  border: .3em solid #2ecc71;
+  outline: none;
+  color: #2ecc71;
+  box-shadow: inset 0 0 1em #cccccc;
+}
+
+.chat form > label {
+  margin-bottom: .5em;
+  color: #000;
+  font-size: .8em;
+}
 /* Media item
 ------------------------------------------------*/
 .media-item {
