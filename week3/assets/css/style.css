@@ -2,19 +2,90 @@
 ---------------------------------------------------- */
 body {
   font-family: 'Open Sans', sans-serif;
+  margin: 0;
 }
 
 ul {
   list-style: none;
+  padding: 0;
+}
+
+a {
+  outline: none;
+  border: .25em solid transparent;
 }
 
 /* Navigation
 ---------------------------------------------------- */
 header nav {
-  display: flex;
+  text-align: center;
+}
+
+header h1 {
+  padding: 1em 0;
+  margin: 0;
+  background-color: #1C6A81;
+  color: #fff;
 }
 
 header ul {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
+  justify-content: flex-start;
+  margin-top: 0;
+}
+
+header li > ul {
+  flex-direction: column;
+
+}
+
+header a {
+  display: block;
+  padding: .7em;
+  background-color: #3E414A;
+  color: #fff;
+  text-decoration: none;
+  text-align: center;
+}
+
+header li > a:hover {
+  background-color: #CF4857;
+}
+
+.dropdown:hover > ul {
+  display: flex;
+  flex-direction: column;
+}
+
+header a:focus {
+  border: .25em solid #f1c40f;
+}
+
+header a:focus + ul {
+  display: flex;
+}
+
+[aria-label="current"] {
+  background-color: #d73446;
+}
+
+header li ul {
+  display: none;
+  padding: 0;
+  list-style: none;
+}
+
+header li ul a {
+  background-color: #4D4F5B;
+}
+
+header li {
+  flex: 1 1 0;
+}
+
+@media screen and (min-width: 35em) {
+  header ul {
+    flex-direction: row;
+  }
 }
