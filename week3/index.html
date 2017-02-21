@@ -5,7 +5,7 @@
 
       <meta charset="utf-8" />
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <title>Site Week 3 - Camille Sébastien</title>
+      <title>GeekTutorials</title>
 
       <!-- Stylesheets -->
       <link rel="stylesheet" type="text/css" href="assets/css/style.css" />
@@ -19,22 +19,42 @@
 
     <header>
       <nav>
-        <h1>GeekTutorials</h1>
+        <h1>< GeekTutorials / ></h1>
           <ul>
             <li><a href="#home" aria-label="current">Homepage</a></li>
             <li class="dropdown"><a href="#">Tutorials</a>
               <ul>
-                  <li><a href="/products/rock">Flexbox Media item</a></li>
-                  <li><a href="/products/paper">Paper</a></li>
-                  <li><a href="/products/scissors">Scissors</a></li>
+                  <li><a href="./tutorials/media-item.html">Media item</a></li>
+                  <li><a href="/products/picture-subtitle">Picture with Subtitle</a></li>
+                  <li><a href="/products/rating">Rating Component</a></li>
+                  <li><a href="/products/rating">Step indicator</a></li>
               </ul>
             </li>
             <li><a href="#login">Login</a></li>
             <li><a href="#">Contact</a></li>
+            <li><a target="_blank" href="https://github.com/camille500/CSS-To-The-Rescue/tree/master/week3">Github</a></li>
           </ul>
       </nav>
     </header>
 
+    <main>
+        <!-- <h1>Welcome at GeekTutorials</h1> -->
+    </main>
+
+    <section class="login">
+      <form action="/" method="post">
+        <fieldset>
+          <label for="field-email">Email</label>
+          <input type="email" id="field-email" name="field-email" autocomplete="email" required autofocus>
+          <label for="field-password">Password</label>
+          <input type="password" id="field-password" name="field-password" required>
+          <input type="checkbox" id="field-stay-logged-in" name="field-stay-logged-in" value="stay-logged-in">
+          <label for="field-stay-logged-in">Stay logged in</label>
+          <a href="/">Forgot password</a>
+          <button role="button" type="submit">Login</button>
+        </fieldset>
+      </form>
+    </section>
 
   </body>
 
