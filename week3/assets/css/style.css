@@ -1,7 +1,6 @@
 /* Week 3 - Website with all components
 ---------------------------------------------------- */
 body {
-  background-color: #e4e4e4;
   font-family: 'Open Sans', sans-serif;
   margin: 0;
 }
@@ -11,13 +10,25 @@ ul {
   padding: 0;
 }
 
+section {
+  display: block;
+}
+
 h1, h2, h3, h4, h5 {
-  font-family: 'Quicksand';
+  font-family: 'Open Sans';
+  letter-spacing: .125em;
+  text-transform: uppercase;
+  font-weight: 700;
 }
 
 a {
   outline: none;
   border: .25em solid transparent;
+  padding: .25em;
+}
+
+a:focus {
+  border-color: #f1c40f;
 }
 
 /* Generic Form Styles
@@ -57,7 +68,7 @@ input:valid {
 
 input:focus,
 .chat textarea:focus {
-  border: .25em #f1c40f solid;
+  border: .25em #3E414A solid;
   outline: none;
 }
 
@@ -130,9 +141,9 @@ header nav {
 }
 
 header h1 {
-  padding: 1em 0;
+  padding: 1.5em 0;
   margin: 0;
-  background-color: #2980b9;
+  background-color: #1d2225;
   color: #fff;
 }
 
@@ -145,6 +156,7 @@ header ul {
 
 header li > ul {
   flex-direction: column;
+  z-index: 10;
 }
 
 header li {
@@ -210,10 +222,6 @@ header li ul a {
 
 /* Login
 ---------------------------------------------------- */
-.login {
-  display: block;
-}
-
 .login fieldset {
   position: relative;
   display: flex;
@@ -222,7 +230,7 @@ header li ul a {
   padding: 2em;
   margin: 5em auto;
   transition: .5s;
-  background-color: #3e414a;
+  background-color: #f3f3f5;
   border: none;
 }
 
@@ -242,16 +250,17 @@ header li ul a {
   top: 14.5em;
   right: 2em;
   flex-basis: 26%;
+  color: #2980b9;
   text-align: right;
-  color: #ecf0f1;
   font-weight: 800;
+  text-decoration: none;
 }
 
 .login label {
   flex-basis: 100%;
   margin-bottom: .5em;
-  color: #fff;
-  font-weight: 800;
+  color: #1d2225;
+  font-weight: 500;
 }
 
 .login input {
@@ -270,10 +279,6 @@ header li ul a {
   flex-basis: auto;
 }
 
-main {
-  margin: 0 auto;
-}
-
 @media screen and (max-width: 63.75em) {
   .login fieldset {
     width: 60%;
@@ -284,4 +289,33 @@ main {
   .login fieldset {
     width: 80%;
   }
+}
+
+/* Media item
+---------------------------------------------------- */
+.media-item {
+  max-width: 25em;
+  background-color: #ecf0f1;
+  margin: 0 auto;
+}
+
+.media-item h1 {
+  margin: 0;
+  padding: 1em;
+  background-color: #34495e;
+}
+
+.media-item h1:before {
+  content: "";
+  margin-left: -0.5em;
+}
+
+.media-item a {
+  color: white;
+  text-decoration: none;
+}
+
+.media-item p {
+  padding: 1em;
+  padding-top: 0;
 }
