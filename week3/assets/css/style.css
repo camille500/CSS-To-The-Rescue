@@ -1,14 +1,14 @@
 /* Week 3 - Website with all components
 ---------------------------------------------------- */
 body {
-  font-family: 'Open Sans', sans-serif;
   margin: 0;
+  font-family: 'Open Sans', sans-serif;
   counter-reset: section;
 }
 
 ul, ol {
-  list-style: none;
   padding: 0;
+  list-style: none;
 }
 
 section {
@@ -18,15 +18,15 @@ section {
 h1, h2, h3, h4, h5 {
   display: block;
   font-family: 'Open Sans';
+  font-weight: 700;
   letter-spacing: .125em;
   text-transform: uppercase;
-  font-weight: 700;
 }
 
 a {
-  outline: none;
-  border: .25em solid transparent;
   padding: .25em;
+  border: .25em solid transparent;
+  outline: none;
 }
 
 a:focus {
@@ -40,7 +40,6 @@ a:focus {
   width: 100%;
   margin-left: auto;
   margin-top: 1em;
-  border: none;
   border: .25em solid transparent;
   background-color: #4886ff;
   color: white;
@@ -122,12 +121,12 @@ input[type="radio"]:hover + label::before {
 }
 
 input[type="radio"]:checked + label::before {
-  transition: .25s;
+  transition: .4s;
   content: '\a0';
   display: inline-block;
   width: 5.5em;
   height: 5.5em;
-  border: .2em solid #1C1B20;
+  border: .2em solid #fff;
   border-radius: 100%;
 }
 
@@ -140,6 +139,8 @@ input[type="checkbox"]:checked + label::before {
 input[type="checkbox"]:focus + label::before {
   border: .2em #f1c40f solid;
 }
+
+
 
 /* Navigation
 ---------------------------------------------------- */
@@ -197,8 +198,8 @@ header a:focus + ul {
 }
 
 header li ul {
-  position: static;
   display: none;
+  position: static;
   padding: 0;
   list-style: none;
 }
@@ -236,9 +237,9 @@ header li ul a {
   width: 40%;
   padding: 2em;
   margin: 5em auto;
+  border: none;
   transition: .5s;
   background-color: #f3f3f5;
-  border: none;
 }
 
 .login fieldset:invalid > [role="button"] {
@@ -254,9 +255,9 @@ header li ul a {
 
 .login a {
   position: absolute;
+  flex-basis: 26%;
   top: 14.5em;
   right: 2em;
-  flex-basis: 26%;
   color: #2980b9;
   text-align: right;
   font-weight: 800;
@@ -303,8 +304,8 @@ header li ul a {
 .media-item {
   position: relative;
   max-width: 25em;
-  background-color: #ecf0f1;
   margin: 0 auto;
+  background-color: #ecf0f1;
 }
 
 .media-item h1 {
@@ -346,9 +347,9 @@ header li ul a {
 .step-indicator nav {
   display: flex;
   flex-direction: column;
+  width: 60%;
   padding: 2em;
   margin: 5em auto;
-  width: 60%;
   background-color: #34495e;
 }
 
@@ -366,14 +367,14 @@ header li ul a {
 
 .step-indicator li {
   padding: .75em 1.25em;
-  text-align: center;
   color: white;
+  text-align: center;
 }
 
 .step-indicator li:before {
+  color: white;
   counter-increment: section;
   content: counter(section) ". ";
-  color: white;
 }
 
 .step-indicator a {
@@ -401,8 +402,8 @@ header li ul a {
 /* Chat
 ---------------------------------------------------- */
 .chat {
-  margin: 0 auto;
   max-width: 22em;
+  margin: 0 auto;
   background-color: #f3f3f5;
 }
 
@@ -419,20 +420,30 @@ header li ul a {
 
 .chat li > p {
   padding: 1em;
-  background-color: white;
   margin-bottom: 0;
+  background-color: white;
   text-align: right;
 }
 
+.chat p {
+  border-radius: .5em .5em 0 0;
+}
+
 .chat footer {
-  margin-top: 0;
   padding: .5em;
+  margin-top: 0;
+  border-bottom-right-radius: .5em;
   background-color: rgb(213, 213, 213);
 }
 
+.chat .your-message footer {
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: .5em;
+}
+
 .chat footer > p {
-  font-size: .75em;
   display: inline;
+  font-size: .75em;
 }
 
 .chat li:nth-of-type(2) > p {
@@ -442,16 +453,16 @@ header li ul a {
 }
 
 .chat label {
+  margin-bottom: .5em;
   color: white;
   font-size: .9em;
-  margin-bottom: .5em;
 }
 
 .chat textarea {
-  resize: none;
   height: 5em;
   border: .3em solid transparent;
   outline: none;
+  resize: none;
 }
 
 [data-status="DELIVERED"],
@@ -462,6 +473,55 @@ header li ul a {
 
 /* Rating
 ---------------------------------------------------- */
+.rating {
+  width: 50%;
+  margin: 5em auto;
+}
+
+.rating > div {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  min-height: 7em;
+  max-width: 100%;
+  padding: 1em;
+  padding-top: .5em;
+  background-color: #34495e;
+}
+
+.rating svg {
+  height: 3.5em;
+  max-width: 3.5em;
+  margin-top: 1em;
+}
+
+.rating svg:hover {
+  height: 4em;
+  max-width: 4em;
+}
+
+.rated:focus + svg {
+  height: 4em;
+}
+
+.rating legend {
+  width: 100%;
+  padding: .6em 0;
+  background-color: #FF5851;
+  color: white;
+  font-size: 1.25em;
+  text-align: center;
+}
+
+.rating legend:before {
+  margin-left: .6em;
+  content: '';
+}
+
+.rating label {
+  padding-top: .75em;
+}
+
 #rating-0 + label::before {
   background: url('../images/angry.svg') 0px center no-repeat;
 }
