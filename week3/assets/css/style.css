@@ -459,3 +459,21 @@ header li ul a {
   float: right;
   margin-top: .3em;
 }
+
+/* Rating
+---------------------------------------------------- */
+#rating-0 + label::before {
+  background: url('../images/angry.svg') 0px center no-repeat;
+}
+
+#rating-1 + label::before {
+  background: url('../images/meh.svg') 0px center no-repeat;
+}
+
+#rating-2 + label::before {
+  background: url('../images/nice.svg') 0px center no-repeat;
+}
+
+#rating-3 + label::before {
+  background: url('../images/fantastical.svg') 0px center no-repeat;
+}
