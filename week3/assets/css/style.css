@@ -33,6 +33,10 @@ a:focus {
   border-color: #f1c40f;
 }
 
+img {
+
+}
+
 /* Generic Form Styles
 ---------------------------------------------------- */
 [role="button"] {
@@ -459,8 +463,11 @@ header li ul a {
 }
 
 .chat textarea {
-  height: 5em;
+  height: 3.5em;
+  padding: .5em;
   border: .3em solid transparent;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 1em;
   outline: none;
   resize: none;
 }
@@ -536,4 +543,36 @@ header li ul a {
 
 #rating-3 + label::before {
   background: url('../images/fantastical.svg') 0px center no-repeat;
+}
+
+/* Media subtitle
+---------------------------------------------------- */
+.media-subtitle {
+  position: relative;
+  width: min-content;
+  margin: 0 auto 5em auto;
+}
+
+.media-subtitle h1 {
+  position: absolute;
+  padding: 2em;
+  margin: 0;
+  margin-left: 1em;
+  background-color: black;
+  color: white;
+}
+
+.media-subtitle article {
+  display: flex;
+  flex-direction: column;
+}
+
+.media-subtitle figcaption {
+  padding: .5em 1em 1em 1em;
+  background-color: #F3F3F5;
+}
+
+.media-subtitle img {
+  max-width: 100vw;
+  max-height: 100vh;
 }
