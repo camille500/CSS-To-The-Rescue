@@ -90,8 +90,8 @@ input[type="checkbox"] {
 }
 
 input[type="radio"] {
+  opacity: 0;
   position: absolute;
-  clip: rect(0,0,0,0);
 }
 
 input[type="checkbox"] + label::before {
@@ -117,19 +117,15 @@ input[type="radio"] + label::before {
 
 input[type="radio"]:hover + label::before {
   transition: .25s;
-  content: '\a0';
-  display: inline-block;
-  width: 5em;
-  height: 5em;
+  width: 4.75em;
+  height: 4.75em;
   border-radius: 100%;
 }
 
 input[type="radio"]:checked + label::before {
   transition: .4s;
-  content: '\a0';
-  display: inline-block;
-  width: 5.5em;
-  height: 5.5em;
+  width: 5.25em;
+  height: 5.25em;
   border: .2em solid #fff;
   border-radius: 100%;
 }
@@ -140,8 +136,13 @@ input[type="checkbox"]:checked + label::before {
   color: white;
 }
 
-input[type="checkbox"]:focus + label::before {
+input[type="checkbox"]:focus + label::before,
+input[type="radio"]:focus + label::before {
   border: .2em #f1c40f solid;
+}
+
+input[type="radio"]:focus + label::before {
+  border-radius: 50%;
 }
 
 
@@ -351,9 +352,10 @@ header li ul a {
 .step-indicator nav {
   display: flex;
   flex-direction: column;
-  width: 60%;
-  padding: 2em;
+  transition: .3s;
+  width: 85%;
   margin: 5em auto;
+  padding: 2em;
   background-color: #34495e;
 }
 
@@ -371,17 +373,24 @@ header li ul a {
 
 .step-indicator li {
   padding: .75em 1.25em;
+  margin-top: .5em;
   color: white;
   text-align: center;
 }
 
 .step-indicator li:before {
-  color: white;
+  color: inherit;
   counter-increment: section;
   content: counter(section) ". ";
 }
 
 .step-indicator a {
+  color: white;
+}
+
+.step-indicator a:focus {
+  padding: .55em 1.05em;
+  border: .2em #f1c40f solid;
   color: white;
 }
 
@@ -401,6 +410,13 @@ header li ul a {
 }
 .step-indicator progress::-webkit-progress-value {
   background-color: #e74c3c;
+}
+
+@media screen and (min-width: 53.125em) {
+  .step-indicator nav {
+    transition: .3s;
+    width: 50%;
+  }
 }
 
 /* Chat
@@ -481,7 +497,7 @@ header li ul a {
 /* Rating
 ---------------------------------------------------- */
 .rating {
-  width: 50%;
+  width: 80%;
   margin: 5em auto;
 }
 
@@ -497,8 +513,6 @@ header li ul a {
 }
 
 .rating svg {
-  height: 3.5em;
-  max-width: 3.5em;
   margin-top: 1em;
 }
 
@@ -545,34 +559,35 @@ header li ul a {
   background: url('../images/fantastical.svg') 0px center no-repeat;
 }
 
+@media screen and (max-width: 35em) {
+  .rating {
+    width: 95%;
+  }
+}
+
 /* Media subtitle
 ---------------------------------------------------- */
-.media-subtitle {
-  position: relative;
-  width: min-content;
-  margin: 0 auto 5em auto;
-}
-
-.media-subtitle h1 {
-  position: absolute;
-  padding: 2em;
-  margin: 0;
-  margin-left: 1em;
-  background-color: black;
-  color: white;
-}
-
 .media-subtitle article {
+  position: absolute;
   display: flex;
   flex-direction: column;
+  padding: 1em;
 }
 
-.media-subtitle figcaption {
-  padding: .5em 1em 1em 1em;
-  background-color: #F3F3F5;
+
+
+.media-subtitle figure {
+  display: flex;
+  flex-direction: column;
+  max-width: 30em;
 }
 
 .media-subtitle img {
-  max-width: 100vw;
-  max-height: 100vh;
+  width: 100%;
+}
+
+@media screen and (max-width: 29.68em) {
+  .media-subtitle h1 {
+    padding: .75em;
+  }
 }
