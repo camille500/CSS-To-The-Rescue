@@ -559,35 +559,30 @@ header li ul a {
   background: url('../images/fantastical.svg') 0px center no-repeat;
 }
 
-@media screen and (max-width: 35em) {
+@media screen and (max-width: 40em) {
   .rating {
-    width: 95%;
+    width: 97.5%;
   }
 }
 
 /* Media subtitle
 ---------------------------------------------------- */
-.media-subtitle article {
-  position: absolute;
-  display: flex;
-  flex-direction: column;
-  padding: 1em;
-}
-
-
-
-.media-subtitle figure {
-  display: flex;
-  flex-direction: column;
+.media-subtitle {
   max-width: 30em;
+  padding: .75em;
+  background-color: #ecf0f1;
+  color: #666;
 }
 
 .media-subtitle img {
-  width: 100%;
+  max-width: 100%;
 }
 
-@media screen and (max-width: 29.68em) {
-  .media-subtitle h1 {
-    padding: .75em;
-  }
+.media-subtitle h1 {
+  margin-left: 2em;
+}
+
+.media-subtitle a {
+  float: right;
+  color: #f1c40f;
 }
