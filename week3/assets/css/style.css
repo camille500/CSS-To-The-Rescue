@@ -33,17 +33,12 @@ a:focus {
   border-color: #f1c40f;
 }
 
-img {
-
-}
-
 /* Generic Form Styles
 ---------------------------------------------------- */
 [role="button"] {
   height: 2.5em;
   width: 100%;
-  margin-left: auto;
-  margin-top: 1em;
+  margin: 1em 0 0 auto;
   border: .25em solid transparent;
   background-color: #4886ff;
   color: white;
@@ -568,6 +563,7 @@ header li ul a {
 /* Media subtitle
 ---------------------------------------------------- */
 .media-subtitle {
+  margin: 0 auto;
   max-width: 30em;
   padding: .75em;
   background-color: #ecf0f1;
@@ -584,5 +580,12 @@ header li ul a {
 
 .media-subtitle a {
   float: right;
-  color: #f1c40f;
+  color: #3498db;
+}
+
+@media screen and (max-width: 24.6em) {
+  .media-subtitle {
+    padding: .5em;
+    max-width: 100%;
+  }
 }
