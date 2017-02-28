@@ -436,13 +436,51 @@ header li ul a {
 /* Chat
 ---------------------------------------------------- */
 .chat {
-  max-width: 22em;
+  transition: .5s;
+  position: fixed;
+  bottom: -36em;
+  right: 0;
+  min-width: 22em;
   margin: 0 auto;
   background-color: #f3f3f5;
 }
 
+.chat > a {
+  display: block;
+  padding: .5em;
+  background-color: #34495e;
+  color: white;
+  text-decoration: none;
+  font-size: 1.2em;
+  text-align: center;
+}
+
+#chat:target {
+  transition: .5s;
+  bottom: 0em;
+}
+
+#chat:target > a {
+  display: none;
+}
+
+#chat > a.close {
+  display: none;
+}
+
+#chat:target > a.close {
+  display: block;
+  padding: .5em;
+  background-color: #34495e;
+  color: white;
+  text-decoration: none;
+  font-size: 1.2em;
+  text-align: center;
+}
+
 .chat ol {
   padding: .75em;
+  width: 20em;
 }
 
 .chat form {
