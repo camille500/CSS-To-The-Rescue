@@ -230,16 +230,31 @@ header li ul a {
 
 /* Login
 ---------------------------------------------------- */
+.login {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  z-index: 1000;
+}
+
 .login fieldset {
   position: relative;
   display: flex;
   flex-wrap: wrap;
   width: 40%;
   padding: 2em;
-  margin: 5em auto;
+  margin: 8em auto 5em auto;
   border: none;
   transition: .5s;
   background-color: #f3f3f5;
+}
+
+.login fieldset:valid {
+  background-color: rgb(71, 255, 220);
 }
 
 .login fieldset:invalid > [role="button"] {
@@ -285,6 +300,10 @@ header li ul a {
 
 .login [type="checkbox"] {
   flex-basis: auto;
+}
+
+#login:target {
+  display: block;
 }
 
 @media screen and (max-width: 63.75em) {
@@ -588,4 +607,14 @@ header li ul a {
     padding: .5em;
     max-width: 100%;
   }
+}
+
+/* Footer
+---------------------------------------------------- */
+footer.main {
+  padding: 1.5em;
+  margin-top: 2em;
+  background-color: #1D2225;
+  color: white;
+  text-align: center;
 }
