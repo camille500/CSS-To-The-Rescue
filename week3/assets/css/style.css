@@ -438,9 +438,9 @@ header li ul a {
 .chat {
   transition: .5s;
   position: fixed;
-  bottom: -36em;
+  bottom: -27.5em;
   right: 0;
-  min-width: 22em;
+  min-width: 19em;
   margin: 0 auto;
   background-color: #f3f3f5;
 }
@@ -448,7 +448,7 @@ header li ul a {
 .chat > a {
   display: block;
   padding: .5em;
-  background-color: #34495e;
+  background-color: #f1c40f;
   color: white;
   text-decoration: none;
   font-size: 1.2em;
@@ -471,7 +471,6 @@ header li ul a {
 #chat:target > a.close {
   display: block;
   padding: .5em;
-  background-color: #34495e;
   color: white;
   text-decoration: none;
   font-size: 1.2em;
@@ -480,7 +479,9 @@ header li ul a {
 
 .chat ol {
   padding: .75em;
-  width: 20em;
+  width: 18em;
+  height: 12.5em;
+  overflow: scroll;
 }
 
 .chat form {
@@ -531,7 +532,7 @@ header li ul a {
 }
 
 .chat textarea {
-  height: 3.5em;
+  height: 2.5em;
   padding: .5em;
   border: .3em solid transparent;
   font-family: 'Open Sans', sans-serif;
@@ -645,6 +646,12 @@ header li ul a {
     padding: .5em;
     max-width: 100%;
   }
+}
+
+/* Ampersand
+---------------------------------------------------- */
+.amp {
+
 }
 
 /* Footer
