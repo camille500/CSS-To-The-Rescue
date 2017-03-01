@@ -387,6 +387,7 @@ header li ul a {
   }
   .media-item img:nth-of-type(2) {
     display: block;
+    max-width: 100%;
   }
 }
 
