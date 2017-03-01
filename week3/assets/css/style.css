@@ -308,6 +308,17 @@ header li ul a {
   }
 }
 
+/* Homepage
+---------------------------------------------------- */
+.homepage {
+  padding: 2em;
+}
+
+.homepage p {
+  max-width: 30em;
+  line-height: 1.5;
+}
+
 main > h1 {
   margin: 1.25em .75em;
   padding: .4em;
@@ -326,6 +337,7 @@ main > h1 {
   width: 100vw;
   background-color: #2C3E50;
   z-index: 1000;
+  cursor: progress;
 }
 
 .loading > div {
@@ -741,6 +753,81 @@ article time {
   }
 }
 
+/* Rating
+---------------------------------------------------- */
+.rating {
+  width: 80%;
+  padding: 2em;
+}
+
+.rating p {
+  max-width: 40em;
+}
+
+.rating div {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  min-height: 7em;
+  max-width: 100%;
+  padding: 1em;
+  padding-top: .5em;
+  background-color: #34495e;
+}
+
+.rating svg {
+  margin-top: 1em;
+}
+
+.rating svg:hover {
+  height: 4em;
+  max-width: 4em;
+}
+
+.rated:focus + svg {
+  height: 4em;
+}
+
+.rating legend {
+  width: 100%;
+  padding: .6em 0;
+  margin-top: 2em;
+  background-color: #FF5851;
+  color: white;
+  font-size: 1.25em;
+  text-align: center;
+}
+
+.rating legend:before {
+  margin-left: .6em;
+  content: '';
+}
+
+.rating label {
+  padding-top: .75em;
+}
+
+#rating-0 + label::before {
+  background: url('../images/angry.svg') 0px center no-repeat;
+}
+
+#rating-1 + label::before {
+  background: url('../images/meh.svg') 0px center no-repeat;
+}
+
+#rating-2 + label::before {
+  background: url('../images/nice.svg') 0px center no-repeat;
+}
+
+#rating-3 + label::before {
+  background: url('../images/fantastical.svg') 0px center no-repeat;
+}
+
+@media screen and (max-width: 40em) {
+  .rating {
+    width: 87.5%;
+  }
+}
 
 
 /* Helpers
