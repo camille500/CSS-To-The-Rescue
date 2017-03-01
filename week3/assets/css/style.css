@@ -143,6 +143,7 @@ input[type="radio"]:hover + label::before {
   width: 4.75em;
   height: 4.75em;
   border-radius: 100%;
+  cursor: pointer;
 }
 
 input[type="radio"]:checked + label::before {
@@ -539,6 +540,105 @@ article time {
   }
 }
 
+/* Registration form
+---------------------------------------------------- */
+.subscribe h2 {
+  max-width: 30em;
+  padding: 1em;
+  margin-left: 1.5em;
+  background-color: #E74C3C;
+  color: white;
+}
+
+.subscribe p {
+  max-width: 40em;
+  padding: 0 0 1em 2.3em;
+  line-height: 1.5;
+}
+
+.subscribe button {
+  max-width: 20em;
+  margin-left: 2em;
+}
+
+@media screen and (max-width: 42.5em) {
+  .subscribe h2 {
+    margin-left: 0em;
+  }
+  .subscribe p {
+    padding-left: 1.5em;
+  }
+  .subscribe button {
+    max-width: 100%;
+    margin-left: 0;
+  }
+}
+/* Step indicator
+---------------------------------------------------- */
+.step-indicator nav {
+  display: flex;
+  flex-direction: column;
+  transition: .3s;
+  width: 90%;
+  margin: 2em auto;
+  padding: 2em;
+  background-color: #34495e;
+}
+
+.step-indicator h1 {
+  color: white;
+  margin-bottom: 1em;
+  font-size: 1.25em;
+}
+
+.step-indicator ol {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-bottom: 0;
+}
+
+.step-indicator li {
+  padding: .75em 1.25em;
+  margin-top: .5em;
+  color: white;
+  text-align: center;
+}
+
+.step-indicator li:before {
+  color: inherit;
+  counter-increment: section;
+  content: counter(section) ". ";
+}
+
+.step-indicator a {
+  color: white;
+}
+
+.step-indicator a:focus {
+  padding: .55em 1.05em;
+  border: .2em #f1c40f solid;
+  color: white;
+}
+
+.step-indicator [aria-label="current step"] {
+  color: yellow;
+}
+
+.step-indicator progress {
+  width: 100%;
+  height: 2em;
+  border: 0;
+  background-color: #fff;
+}
+
+.step-indicator progress::-webkit-progress-bar {
+  background-color: #ecf0f1;
+}
+.step-indicator progress::-webkit-progress-value {
+  background-color: #e74c3c;
+}
 
 /* Login
 ---------------------------------------------------- */
@@ -784,10 +884,6 @@ article time {
   max-width: 4em;
 }
 
-.rated:focus + svg {
-  height: 4em;
-}
-
 .rating legend {
   width: 100%;
   padding: .6em 0;
@@ -829,6 +925,28 @@ article time {
   }
 }
 
+/* Shortcuts
+---------------------------------------------------- */
+.shortcuts {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.shortcuts a {
+  transition: .5s;
+  max-width: 47.5%;
+  margin-bottom: 1em;
+  padding: 2em;
+  background-color: red;
+  color: white;
+}
+
+.shortcuts a:hover {
+  transition: .5s;
+  background-color: #2980b9;
+}
 
 /* Helpers
 ---------------------------------------------------- */

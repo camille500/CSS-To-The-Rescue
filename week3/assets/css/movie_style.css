@@ -199,8 +199,14 @@ td:nth-child(2) {
   .movie_single ul {
     padding: 0;
   }
+  .similar_url {
+    margin-top: 0;
+    margin-bottom: 1em;
+    display: block;
+  }
   .imdb_url {
     margin-left: 0;
+    display: block;
   }
   table {
     width: 90%;
@@ -236,7 +242,7 @@ td:nth-child(2) {
 }
 
 .inline {
-  display: inline-block;
+  display: inline;
 }
 
 #open_search {
@@ -246,4 +252,8 @@ td:nth-child(2) {
 .search_icon {
   width: 1.5em;
   position: relative;
+}
+
+.genre_id {
+  padding: 0;
 }
