@@ -455,7 +455,6 @@ article time {
   display: flex;
   justify-content: space-around;
   flex-wrap: wrap;
-  padding-top: 3em;
 }
 
 .media-item {
@@ -476,13 +475,13 @@ article time {
   margin-left: -0.5em;
 }
 
+.media-item img {
+  max-width: 100%;
+}
+
 .media-item a {
   color: white;
   text-decoration: none;
-}
-
-.media-item img:nth-of-type(2) {
-  display: none;
 }
 
 .media-item a:focus {
@@ -514,18 +513,16 @@ article time {
     flex-direction: row;
   }
   .media-item h1 {
-    position: absolute;
     padding: .5;
   }
   .media-item p {
-    margin-top: 5.5em;
+    display: none;
   }
   .media-item img {
-    display: none;
     margin-top: 4.5em;
+    display: none;
   }
   .media-item img:nth-of-type(2) {
-    display: block;
     max-width: 100%;
   }
 }

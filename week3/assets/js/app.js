@@ -307,26 +307,26 @@
     }
   });
 
-  /* Event listners
-  ---------------------------------------------------------------- */
-  elements.randomButton.addEventListener("click", function() {
-    if (window.location.hash === '#random') {
-      sections.reloadRandom();
-    }
-  });
-
-  /* Handeling of searchButton click
---------------------------------------------------------------*/
-  elements.searchBtn.addEventListener("click", function() {
-    elements.searchBlock.classList.add('hidden');
-    window.location = `#search/${elements.searchField.value.toLowerCase()}`;
-  });
-
-  /* Handeling to show the search block
-  --------------------------------------------------------------*/
-  elements.openSearch.addEventListener("click", function() {
-    elements.searchBlock.classList.remove('hidden');
-  });
+//   /* Event listners
+//   ---------------------------------------------------------------- */
+//   elements.randomButton.addEventListener("click", function() {
+//     if (window.location.hash === '#random') {
+//       sections.reloadRandom();
+//     }
+//   });
+//
+//   /* Handeling of searchButton click
+// --------------------------------------------------------------*/
+//   elements.searchBtn.addEventListener("click", function() {
+//     elements.searchBlock.classList.add('hidden');
+//     window.location = `#search/${elements.searchField.value.toLowerCase()}`;
+//   });
+//
+//   /* Handeling to show the search block
+//   --------------------------------------------------------------*/
+//   elements.openSearch.addEventListener("click", function() {
+//     elements.searchBlock.classList.remove('hidden');
+//   });
 
   /* Filter functionality
   --------------------------------------------------------------*/
