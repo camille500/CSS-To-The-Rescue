@@ -59,6 +59,17 @@ td:first-child {
 td:nth-child(2) {
     width: 66%;
 }
+@font-face {
+  font-family: Ampersand;
+  src: local('Papyrus'),
+       local('Baskerville'),
+       local('Platino');
+  unicode-range: U+26;
+}
+
+.amp {
+  font-family: Ampersand, sans-serif;
+}
 /* Generic components & elements
 ---------------------------------------------------- */
 
@@ -590,7 +601,7 @@ article time {
     position: fixed;
     transition: .5s;
     right: 0;
-    bottom: -27.5em;
+    bottom: -26.5em;
     min-width: 19em;
     margin: 0 auto;
     background-color: #f3f3f5;
@@ -612,6 +623,9 @@ article time {
 }
 .chat > a.close {
     display: none;
+}
+.chat a:focus {
+  border: .25em rgb(255, 255, 255) solid;
 }
 .chat:target > a.close {
     display: block;
@@ -749,9 +763,10 @@ article time {
 
 .shortcuts {
     display: flex;
-    flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-around;
+    margin-bottom: 11.5em;
+    margin-top: 2em;
 }
 .shortcuts a {
     transition: .5s;
@@ -791,13 +806,19 @@ article time {
 }
 /* Helpers
 ---------------------------------------------------- */
-
 .hidden {
     display: none;
 }
+/* Random Background
+---------------------------------------------------- */
+.bg_image {
+    background-image: repeating-linear-gradient(-25deg, rgba(177, 38, 29, 0.95),
+                    rgba(185, 100, 0, 0.95) .75em, rgba(129, 0, 0, 0.9) 1.5em,
+                    rgba(255, 91, 0, 0.9) .75em);
+}
+
 /* Footer
 ---------------------------------------------------- */
-
 footer.main {
     padding: 1.5em;
     margin-top: 2em;
