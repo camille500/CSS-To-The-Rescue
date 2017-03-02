@@ -1,6 +1,5 @@
 /* Generic styles
 ---------------------------------------------------- */
-
 body {
     margin: 0;
     background-color: #dadada;
@@ -11,19 +10,14 @@ body {
 p {
     line-height: 1.3;
 }
-ul,
-ol {
+ul,ol {
     padding: 0;
     list-style: none;
 }
 section {
     display: block;
 }
-h1,
-h2,
-h3,
-h4,
-h5 {
+h1,h2,h3,h4,h5 {
     display: block;
     font-family: inherit;
     font-weight: 700;
@@ -40,9 +34,7 @@ a:focus {
     border-color: #f1c40f;
     outline: none;
 }
-table,
-td,
-th {
+table,td,th {
     border: 1px solid transparent;
 }
 tr {
@@ -60,15 +52,12 @@ td:nth-child(2) {
     width: 66%;
 }
 @font-face {
-  font-family: Ampersand;
-  src: local('Papyrus'),
-       local('Baskerville'),
-       local('Platino');
-  unicode-range: U+26;
+    font-family: Ampersand;
+    src: local('Papyrus'), local('Baskerville'), local('Platino');
+    unicode-range: U+26;
 }
-
 .amp {
-  font-family: Ampersand, sans-serif;
+    font-family: Ampersand, sans-serif;
 }
 /* Generic components & elements
 ---------------------------------------------------- */
@@ -105,7 +94,6 @@ input:focus {
 }
 /* Checkbox & Radio
 ---------------------------------------------------- */
-
 input[type="checkbox"] {
     position: absolute;
     clip: rect(0, 0, 0, 0);
@@ -161,7 +149,6 @@ input[type="radio"]:focus + label::before {
 }
 /* Navigation
 ---------------------------------------------------- */
-
 header nav {
     text-align: center;
 }
@@ -230,7 +217,6 @@ header li ul a {
 }
 /* Homepage
 ---------------------------------------------------- */
-
 .homepage {
     padding: 2em;
 }
@@ -246,7 +232,6 @@ main > h1 {
 }
 /* Movie list
 ---------------------------------------------------- */
-
 .loading {
     position: fixed;
     top: 0;
@@ -270,16 +255,11 @@ main > h1 {
     animation: spin 1.5s linear infinite;
 }
 @keyframes spin {
-    0% {
-        transform: rotate(0deg);
-    }
-    100% {
-        transform: rotate(360deg);
-    }
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
 }
 /* Movie list
 ---------------------------------------------------- */
-
 .movie_list {
     display: flex;
     flex-wrap: wrap;
@@ -368,7 +348,6 @@ article time {
 }
 /* Media item
 ---------------------------------------------------- */
-
 .media-wrapper {
     display: flex;
     justify-content: space-around;
@@ -434,7 +413,6 @@ article time {
 }
 /* Registration form
 ---------------------------------------------------- */
-
 .subscribe h2 {
     max-width: 30em;
     padding: 1em;
@@ -465,7 +443,6 @@ article time {
 }
 /* Step indicator
 ---------------------------------------------------- */
-
 .step-indicator nav {
     display: flex;
     flex-direction: column;
@@ -518,7 +495,6 @@ article time {
 }
 /* Login
 ---------------------------------------------------- */
-
 .login {
     display: none;
     position: fixed;
@@ -596,7 +572,6 @@ article time {
 }
 /* Chat
 ---------------------------------------------------- */
-
 .chat {
     position: fixed;
     transition: .5s;
@@ -625,7 +600,7 @@ article time {
     display: none;
 }
 .chat a:focus {
-  border: .25em rgb(255, 255, 255) solid;
+    border: .25em rgb(255, 255, 255) solid;
 }
 .chat:target > a.close {
     display: block;
@@ -700,7 +675,6 @@ article time {
 }
 /* Rating
 ---------------------------------------------------- */
-
 .rating {
     width: 80%;
     padding: 2em;
@@ -760,7 +734,6 @@ article time {
 }
 /* Shortcuts
 ---------------------------------------------------- */
-
 .shortcuts {
     display: flex;
     flex-wrap: wrap;
@@ -782,7 +755,6 @@ article time {
 }
 /* Full Article
 ---------------------------------------------------- */
-
 .full-article img {
     display: block;
     max-width: 96.72%;
@@ -812,11 +784,8 @@ article time {
 /* Random Background
 ---------------------------------------------------- */
 .bg_image {
-    background-image: repeating-linear-gradient(-25deg, rgba(177, 38, 29, 0.95),
-                    rgba(185, 100, 0, 0.95) .75em, rgba(129, 0, 0, 0.9) 1.5em,
-                    rgba(255, 91, 0, 0.9) .75em);
+    background-image: repeating-linear-gradient(-25deg, rgba(177, 38, 29, 0.95), rgba(185, 100, 0, 0.95) .75em, rgba(129, 0, 0, 0.9) 1.5em, rgba(255, 91, 0, 0.9) .75em);
 }
-
 /* Footer
 ---------------------------------------------------- */
 footer.main {
