@@ -625,6 +625,7 @@ article time {
     padding: 1em;
     margin-bottom: 0;
     background-color: white;
+    color: #666;
     text-align: right;
 }
 .chat p {
@@ -658,7 +659,13 @@ article time {
     height: 3.5em;
     padding: .5em;
     font-family: inherit;
+    font-size: 1em;
     resize: none;
+    border: .3em transparent solid;
+}
+.chat textarea:focus {
+  border: .3em #f1c40f solid;
+  outline: none;
 }
 [data-status="DELIVERED"],
 [data-status="READ"] {
