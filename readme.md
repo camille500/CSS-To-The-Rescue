@@ -6,6 +6,7 @@ All sources I've used so far can be find at the bottom of this read me.
 ## Links to the Live Versions:
 - [Week 1](https://camille500.github.io/CSS-To-The-Rescue/week1/)
 - [Week 2](https://camille500.github.io/CSS-To-The-Rescue/week2/)
+- [Week 3](https://camille500.github.io/CSS-To-The-Rescue/week3/)
 
 ## Annotations
 
